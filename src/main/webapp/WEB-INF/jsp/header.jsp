@@ -12,5 +12,3 @@
 	type="text/javascript" charset="utf-8"></script>
 <script src="<%=ctxPath%>/bootstrap/js/bootstrap.js"
 	type="text/javascript" charset="utf-8"></script>
-<!-- JSP专用链代码一 -->
-<SCRIPT src="http://pstatic.xunlei.com/js/webThunderDetect.js"></SCRIPT>

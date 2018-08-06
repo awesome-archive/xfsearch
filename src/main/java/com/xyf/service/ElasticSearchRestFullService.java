@@ -95,8 +95,8 @@ public class ElasticSearchRestFullService {
 		Root root = new Root();
 		root.setQuery(query);
 		root.setHighlight(highlight);
-		int pageSize = 20;
-		int startSize = (current - 1) * 20;// 起点
+		int pageSize = 10;
+		int startSize = (current - 1) * 10;// 起点
 		root.setFrom(startSize);// 分页代码 设置起始位置
 		root.setSize(pageSize);// 设置返回的size 大小
 		Map<String, Object> msgMap = new HashMap<String, Object>();// 用于返回数据

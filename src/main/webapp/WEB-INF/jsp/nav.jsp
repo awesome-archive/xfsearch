@@ -23,6 +23,26 @@ li {
 	margin-left: 0px
 }
 
+.pay-menu{
+	width:320px;
+}
+		.pay_img{
+			width:150px;
+			height:150px;
+			display:block;
+		}
+		
+		.pay>p{
+			text-align:center;
+		}
+		
+		.pay{
+			float:left;
+			display:block;
+			height:200px;
+			width:150px;
+			padding:10px;
+		}
 .page-bar a {
 	border: 1px solid #ddd;
 	text-decoration: none;
@@ -34,6 +54,7 @@ li {
 	color: #337ab7;
 	cursor: pointer
 }
+
 
 .page-bar a:hover {
 	background-color: #eee;
@@ -177,6 +198,17 @@ li {
  
 </style>
 <script type="text/javascript">
+
+$(document).ready(function(){
+    $("#dropdownMenu1").mouseover(function(){
+       $("#dropdownMenu1").click();
+    });
+    $("#dropdownMenu1").mouseout(function(){
+        $(this).click();    
+    });
+  })
+  
+  
 	function btnType(type) 
 	{
 		var text = document.getElementById("input").value;
