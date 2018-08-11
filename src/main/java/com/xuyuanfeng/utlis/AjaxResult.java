@@ -1,4 +1,4 @@
-package com.rupeng.utlis;
+package com.xuyuanfeng.utlis;
 
 public class AjaxResult {
 /**

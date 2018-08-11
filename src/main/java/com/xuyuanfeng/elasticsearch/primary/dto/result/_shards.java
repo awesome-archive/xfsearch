@@ -1,7 +1,7 @@
 /**
   * Copyright 2018 bejson.com 
   */
-package com.rupeng.elasticsearch.primary.dto.result;
+package com.xuyuanfeng.elasticsearch.primary.dto.result;
 /**
  * Auto-generated: 2018-08-02 10:43:30
  *

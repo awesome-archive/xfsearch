@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.rupeng.utlis.CommonUtils;
+import com.xuyuanfeng.utlis.CommonUtils;
 import com.xyf.service.ElasticSearchRestFullService;
 
 @Controller
@@ -30,7 +30,6 @@ public class CoreController {
 		}
 		ModelAndView modelAndView = new ModelAndView("index");
 		Map<String, Object> msg=restService.search(text, 1, "moviesdb");
-		System.out.println(msg.toString());
 		modelAndView.addObject("msg",msg);
 		return modelAndView;
 	}
@@ -43,7 +42,6 @@ public class CoreController {
 		ModelAndView modelAndView = new ModelAndView("index");
 		int current=cur.intValue();
 		Map<String, Object> msg=restService.search(text, current, "moviesdb");
-		System.out.println(msg.toString());
 		modelAndView.addObject("msg",msg);
 		return modelAndView;
 	}

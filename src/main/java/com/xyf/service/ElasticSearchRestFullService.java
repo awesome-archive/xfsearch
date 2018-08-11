@@ -24,20 +24,20 @@ import org.elasticsearch.common.recycler.Recycler.C;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
-import com.rupeng.elasticsearch.primary.dto.query.Body;
-import com.rupeng.elasticsearch.primary.dto.query.Fields;
-import com.rupeng.elasticsearch.primary.dto.query.Highlight;
-import com.rupeng.elasticsearch.primary.dto.query.Multi_match;
-import com.rupeng.elasticsearch.primary.dto.query.Query;
-import com.rupeng.elasticsearch.primary.dto.query.Root;
-import com.rupeng.elasticsearch.primary.dto.query.Title;
-import com.rupeng.elasticsearch.primary.dto.result.Hit;
-import com.rupeng.elasticsearch.primary.dto.result.JsonRootBean;
-import com.rupeng.utlis.CommonUtils;
-import com.rupeng.utlis.EsUtils;
-import com.rupeng.utlis.HTMLUtils;
-import com.rupeng.utlis.JDBCUtils;
-import com.rupeng.utlis.JsoupUtils;
+import com.xuyuanfeng.elasticsearch.primary.dto.query.Body;
+import com.xuyuanfeng.elasticsearch.primary.dto.query.Fields;
+import com.xuyuanfeng.elasticsearch.primary.dto.query.Highlight;
+import com.xuyuanfeng.elasticsearch.primary.dto.query.Multi_match;
+import com.xuyuanfeng.elasticsearch.primary.dto.query.Query;
+import com.xuyuanfeng.elasticsearch.primary.dto.query.Root;
+import com.xuyuanfeng.elasticsearch.primary.dto.query.Title;
+import com.xuyuanfeng.elasticsearch.primary.dto.result.Hit;
+import com.xuyuanfeng.elasticsearch.primary.dto.result.JsonRootBean;
+import com.xuyuanfeng.utlis.CommonUtils;
+import com.xuyuanfeng.utlis.EsUtils;
+import com.xuyuanfeng.utlis.HTMLUtils;
+import com.xuyuanfeng.utlis.JDBCUtils;
+import com.xuyuanfeng.utlis.JsoupUtils;
 import com.xyf.pojo.Movies;
 
 /**
@@ -124,7 +124,7 @@ public class ElasticSearchRestFullService {
 			if (startSize > result.getHits().getTotal() || result.getHits().getTotal() == 0) // 如果当前页面的起点大于了数据的总条数或者当前页的总条数为0
 			{
 				msgMap.put("message",
-						"<br/><br/><font size='5' color='#ff7300'>没有找到    </font><font size='3' color='#999'>关于“" + text
+						"<br/><br/><font size='5' color='#ff7300'>没有找到    </ofont><font size='3' colr='#999'>关于“" + HTMLUtils.htmlescape(text)
 								+ "”的内容</font>");
 				return msgMap;
 			}
@@ -165,7 +165,6 @@ public class ElasticSearchRestFullService {
 		RestClient restClient = EsUtils.getRestClient();
 		ResultSet rs = null;
 		try {
-			System.out.println("select * from t_movies");
 			rs = JDBCUtils.executeQuery("select * from t_movies");
 			List<Movies> list = new ArrayList<Movies>();
 

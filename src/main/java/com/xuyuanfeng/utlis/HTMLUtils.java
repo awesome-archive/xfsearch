@@ -1,7 +1,9 @@
-package com.rupeng.utlis;
+package com.xuyuanfeng.utlis;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.springframework.web.util.HtmlUtils;
 
 public class HTMLUtils {
 	public static String delHTMLTag(String htmlStr){ 
@@ -41,6 +43,24 @@ public class HTMLUtils {
 		// 还原HTML 
 		return content; 
 		}
+//转码
+	 public static String htmlescape(String html){  
+		    String tmp = HtmlUtils.htmlEscapeDecimal(html);  
+			return tmp;  
+	    }  
+//解码
+	 public static String htmlUnescape(String enhtml){  
+		  
+		    String value = HtmlUtils.htmlUnescape(enhtml);  
+			return value;  
+	    }  
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

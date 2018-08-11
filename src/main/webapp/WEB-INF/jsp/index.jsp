@@ -1,11 +1,18 @@
+<%@page import="com.xuyuanfeng.utlis.HTMLUtils"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
-
+<%
+	String searchValue = request.getParameter("text");
+	if (searchValue == null) {
+		searchValue = "";
+	} else {
+		searchValue = HTMLUtils.htmlescape(searchValue);
+	}
+%>
 <%@include file="/WEB-INF/jsp/header.jsp"%>
 </head>
 <link rel="stylesheet" type="text/css"
@@ -86,7 +93,7 @@
 				<div class="col-lg-11 col-xs-10" style="padding: 0;">
 
 					<input type="text" id="input" name="text"
-						value="<%=request.getParameter("text") == null ? "" : request.getParameter("text")%>"
+						value="<%=searchValue%>"
 						class="form-control" onkeypress="EnterPress(event,value)"
 						onkeydown="EnterPress(event,value)" style="border-radius: 0px;" />
 				</div>

@@ -1,4 +1,4 @@
-package com.rupeng.elasticsearch.primary.dto.query;
+package com.xuyuanfeng.elasticsearch.primary.dto.query;
 
 /**
  * 

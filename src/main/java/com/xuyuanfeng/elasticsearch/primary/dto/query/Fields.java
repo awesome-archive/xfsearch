@@ -1,4 +1,4 @@
-package com.rupeng.elasticsearch.primary.dto.query;
+package com.xuyuanfeng.elasticsearch.primary.dto.query;
 /**
  * 设置高亮字段
  * @author 2016wlw2 徐塬峰

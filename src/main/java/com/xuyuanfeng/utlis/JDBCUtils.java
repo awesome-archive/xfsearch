@@ -1,4 +1,4 @@
-package com.rupeng.utlis;
+package com.xuyuanfeng.utlis;
 
 import java.io.IOException;
 import java.sql.Connection;

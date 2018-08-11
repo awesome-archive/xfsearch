@@ -1,4 +1,4 @@
-package com.rupeng.elasticsearch.primary.dto.result;
+package com.xuyuanfeng.elasticsearch.primary.dto.result;
 
 public class JsonRootBean {
 	   private int took;
