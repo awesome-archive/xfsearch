@@ -2,13 +2,15 @@ package com.xyf.web.controller;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.xuyuanfeng.utlis.CommonUtils;
+import com.xuyuanfeng.utlis.RecordUtils;
 import com.xyf.service.ElasticSearchRestFullService;
 
 @Controller
@@ -24,21 +26,26 @@ public class CoreController {
 		return modelAndView;
 	}
 	@RequestMapping(value = "/search.do", method = RequestMethod.GET)
-	public ModelAndView search(String text) {
+	public ModelAndView search(String text,HttpServletRequest req) {
 		if ( CommonUtils.isEmpty(text) ) {
 			return new ModelAndView("500");
 		}
+		RecordUtils.record(req, text);
 		ModelAndView modelAndView = new ModelAndView("index");
 		Map<String, Object> msg=restService.search(text, 1, "moviesdb");
+		//用于保存键,最后根据这些搜索的键来创建热搜
+                  		
+		
 		modelAndView.addObject("msg",msg);
 		return modelAndView;
 	}
 	@RequestMapping(value = "/pageSearch.do", method = RequestMethod.GET)
-	public ModelAndView search(String text,Long cur) 
+	public ModelAndView search(String text,Long cur,HttpServletRequest req) 
 	{
 		if (CommonUtils.isEmpty(cur) || CommonUtils.isEmpty(text)) {
 			return new ModelAndView("500");
 		}
+		RecordUtils.record(req, text);
 		ModelAndView modelAndView = new ModelAndView("index");
 		int current=cur.intValue();
 		Map<String, Object> msg=restService.search(text, current, "moviesdb");
