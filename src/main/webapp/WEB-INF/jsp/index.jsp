@@ -17,7 +17,7 @@
 </head>
 <link rel="stylesheet" type="text/css"
 	href="<%=ctxPath%>/bootstrap/css/bootstrap.css" />
-<title>搜搜影库</title>
+<title>帮搜</title>
 </head>
 <%@include file="/WEB-INF/jsp/nav.jsp"%>
 <body>
@@ -40,14 +40,15 @@
             -->
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav nav-right">
-					<li class="dropdown"><a href="#" style="color: #fff;"
-						class="dropdown-toggle" data-toggle="dropdown">中国站 <span
-							class="caret"></span></a></li>
+					<li><a href="./" style="color: #fff;" href="">首页</a></li>
+
 					<li><a style="color: #fff;" href="">关于我们</a></li>
- 				<li class="dropdown">
-                    <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" style="color: #fff;">捐助我们 <span class="caret"></span></a>
-                    <ul class="dropdown-menu pay-menu" role="menu">
-                        <div class="pay">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						id="dropdownMenu1" data-toggle="dropdown" style="color: #fff;">捐助我们
+							<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu pay-menu" role="menu">
+							<div class="pay">
 								<div>
 									<img src="<%=ctxPath%>/images/wechat.jpg" class="pay_img" />
 								</div>
@@ -59,9 +60,8 @@
 								</div>
 								<p>支付宝</p>
 							</div>
-                    </ul>
-                </li>
-            
+						</ul></li>
+
 					<!-- <div class="dropdown">
 						<li><a style="color: #fff;" href="">捐助我们</a></li>
 						<div class="dropdown-content">
@@ -92,13 +92,13 @@
 			<div class="form-group">
 				<div class="col-lg-11 col-xs-10" style="padding: 0;">
 
-					<input type="text" id="input" name="text"
-						value="<%=searchValue%>" placeholder="你想要的?"
-						class="form-control" onkeypress="EnterPress(event,value)"
+					<input type="text" id="input" name="text" value="<%=searchValue%>"
+						placeholder="你想要的?" class="form-control"
+						onkeypress="EnterPress(event,value)"
 						onkeydown="EnterPress(event,value)" style="border-radius: 0px;" />
 				</div>
 				<button type="submit" class="btn btn-info col-lg-1 col-xs-2"
-					onclick="ruSearch()"   style="border-radius: 0px;">搜索</button>
+					onclick="ruSearch()" style="border-radius: 0px;">搜索</button>
 			</div>
 			<div class="search_keyword">
 				<p class="text-muted">
@@ -124,12 +124,14 @@
 							<span>${msg.took}</span> <span>${msg.message}</span>
 							<c:forEach items="${msg.itemsList}" var="item">
 
-								<a href="${item.download_url}" target="_blank"><h4>
-										<u>
+								<h4>
+									<u> <a href="<%=ctxPath%>/get.do?id=${item.id}">
 											<p>${item.title}&nbsp;&nbsp;
-												<button class="label label-success">点击下载</button></a>
-								</p>
-								</u>
+									</a> <a href="${item.download_url}" target="_blank">
+											<button class="label label-success">点击下载</button>
+									</a>
+										</p>
+									</u>
 								</h4>
 								<p>
 									<a href=""><img class="img-thumbnail img-responsive"

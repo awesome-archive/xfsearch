@@ -118,6 +118,9 @@ public class ElasticSearchRestFullService {
 				p.setIntroduce(hit.get_source().getIntroduce());
 				p.setDownload_url(hit.get_source().getDownload_url());
 				p.setImg_url(hit.get_source().getImg_url());
+				int id=hit.get_source().getId();
+				Long pid=new Long(id);
+				p.setId(pid);
 				data.add(p);
 			}
 			// 如果当前返回的内容为空 则返回找不到相关的内容

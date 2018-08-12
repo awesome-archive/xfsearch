@@ -9,8 +9,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
 import com.xuyuanfeng.utlis.CommonUtils;
 import com.xuyuanfeng.utlis.RecordUtils;
+import com.xyf.dao.MovieDao;
+import com.xyf.pojo.Movies;
 import com.xyf.service.ElasticSearchRestFullService;
 
 @Controller
@@ -33,9 +36,6 @@ public class CoreController {
 		RecordUtils.record(req, text);
 		ModelAndView modelAndView = new ModelAndView("index");
 		Map<String, Object> msg=restService.search(text, 1, "moviesdb");
-		//用于保存键,最后根据这些搜索的键来创建热搜
-                  		
-		
 		modelAndView.addObject("msg",msg);
 		return modelAndView;
 	}
@@ -80,10 +80,23 @@ public class CoreController {
 		ModelAndView modelAndView = new ModelAndView("download");
 		return modelAndView;
 	}
-	@RequestMapping("/test.do")
-	public ModelAndView test() {
-
-		ModelAndView modelAndView = new ModelAndView("test");
+	/**
+	 * 根据传入的id 去mysql moviedb中读取资料的详细细节
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping("/get.do")
+	public ModelAndView getSource(Long id) {
+		ModelAndView modelAndView = new ModelAndView("source");
+		if (CommonUtils.isEmpty(id)) {
+			return new ModelAndView("500");
+		}
+		MovieDao md=new MovieDao();
+        Movies m=md.getOne(id);
+        if (m==null) {
+			return new ModelAndView("500");
+		}
+        modelAndView.addObject("movie",m);      
 		return modelAndView;
 	}
 	
