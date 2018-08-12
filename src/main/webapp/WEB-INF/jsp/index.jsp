@@ -93,12 +93,12 @@
 				<div class="col-lg-11 col-xs-10" style="padding: 0;">
 
 					<input type="text" id="input" name="text"
-						value="<%=searchValue%>"
+						value="<%=searchValue%>" placeholder="你想要的?"
 						class="form-control" onkeypress="EnterPress(event,value)"
 						onkeydown="EnterPress(event,value)" style="border-radius: 0px;" />
 				</div>
 				<button type="submit" class="btn btn-info col-lg-1 col-xs-2"
-					onclick="ruSearch()" style="border-radius: 0px;">搜索</button>
+					onclick="ruSearch()"   style="border-radius: 0px;">搜索</button>
 			</div>
 			<div class="search_keyword">
 				<p class="text-muted">

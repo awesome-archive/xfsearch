@@ -80,7 +80,12 @@ public class CoreController {
 		ModelAndView modelAndView = new ModelAndView("download");
 		return modelAndView;
 	}
-	
+	@RequestMapping("/test.do")
+	public ModelAndView test() {
+
+		ModelAndView modelAndView = new ModelAndView("test");
+		return modelAndView;
+	}
 	
 
 }
