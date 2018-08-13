@@ -17,7 +17,7 @@
 </head>
 <link rel="stylesheet" type="text/css"
 	href="<%=ctxPath%>/bootstrap/css/bootstrap.css" />
-<title>帮搜</title>
+<title>搜搜影库</title>
 </head>
 <%@include file="/WEB-INF/jsp/nav.jsp"%>
 <body>
