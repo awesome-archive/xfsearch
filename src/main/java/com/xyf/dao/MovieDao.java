@@ -40,8 +40,11 @@ public class MovieDao {
         } catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return m;
-		 
+        finally
+        {
+        	JDBCUtils.closeAll(rs);
+        }
+		return null;
         
 	 }
 	
