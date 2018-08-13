@@ -284,7 +284,7 @@
 														<ul class="MovieResources__self_resouces_icon___17W30">
 															<li class="MovieResources__ci_icon___1J-At"><a
 																target="_blank"
-																href="magnet:?xt=urn:btih:5FE8A49E45C2567DAD0596D2D4D5FD8D490CB362"><i
+																href="${movie.download_url}"><i
 																	class="iconfont icon-xiazai"></i> <!-- react-text: 191 -->磁链
 																	<!-- /react-text --> </a></li>
 														</ul>
@@ -301,7 +301,7 @@
 														<ul class="MovieResources__self_resouces_icon___17W30">
 															<li class="MovieResources__ci_icon___1J-At"><a
 																target="_blank"
-																href="magnet:?xt=urn:btih:5FE8A49E45C2567DAD0596D2D4D5FD8D490CB362"><i
+																href="${movie.download_url}"><i
 																	class="iconfont icon-xiazai"></i> <!-- react-text: 191 -->磁链
 																	<!-- /react-text --> </a></li>
 														</ul>
