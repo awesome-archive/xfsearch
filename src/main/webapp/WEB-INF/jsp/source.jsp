@@ -94,7 +94,7 @@
 					<div id="BaikeCommon__content_wrapper___1t7FZ">
 						<div id="BaikeCommon__summary_wrapper___5T2oW">
 							<div class="BaikeCommon__summary_content___1XNU1">
-								<h1>${movie.title}</h1>
+								<h1 style="width:720px;float:left">${movie.title}</h1>
 								<div class="BaikeCommon__basic_info___1AP4H">
 									<dl class="BaikeCommon__basic_info_left___Gu5JP">
 										<div>
@@ -191,11 +191,12 @@
 									</dl>
 									<div class="clearfix"></div>
 								</div>
-								<div class="BaikeCommon__summary___1SPO3">   简介：${movie.introduce}</div>
-							<div class="BaikeCommon__summary_side___jkT1I">
+								<div class="BaikeCommon__summary_side___jkT1I">
 								<img
 									src="${movie.img_url}">
 							</div>
+								<div class="BaikeCommon__summary___1SPO3">   简介：${movie.introduce}</div>
+							
 						</div>
 						<div class="clearfix"></div>
 						<div class="Movie__resources_wrapper___2cMax">

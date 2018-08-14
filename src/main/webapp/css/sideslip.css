@@ -261,6 +261,8 @@ body {
   text-align: center;
   width: 100px;
 }
+
+
 .hamburger.is-open:hover before {
   -webkit-transform: translate3d(-100px, 0, 0);
   -webkit-transition: all 0.35s ease-in-out;

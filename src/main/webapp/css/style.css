@@ -2919,7 +2919,7 @@ a.MovieCard__douban___1-j7D:hover {
 }
 #BaikeCommon__summary_wrapper___5T2oW .BaikeCommon__summary_content___1XNU1 {
   float: left;
-  width: 820px;
+  /*width: 820px;*/
   padding-right: 30px;
   position: relative;
 }
@@ -2933,6 +2933,7 @@ a.MovieCard__douban___1-j7D:hover {
   line-height: 24px;
 }
 #BaikeCommon__summary_wrapper___5T2oW .BaikeCommon__summary_side___jkT1I {
+ 
   float: left;
   width: 248px;
   border: solid 1px #ddd;
@@ -2940,9 +2941,13 @@ a.MovieCard__douban___1-j7D:hover {
   margin-top: 10px;
 }
 #BaikeCommon__summary_wrapper___5T2oW .BaikeCommon__summary_side___jkT1I img {
+	margin-top:0;
   max-width: 248px;
 }
 #BaikeCommon__summary_wrapper___5T2oW .BaikeCommon__basic_info___1AP4H {
+  /*修改的部分，浮动和宽度*/
+  float:left;
+  width:720px;
   margin: 20px 0 35px;
   clear: both;
   background: url(https://baike.bdimg.com/static/wiki-lemma/widget/lemma_content/mainContent/basicInfo/img/basicInfo-bg_7819f20.png);
@@ -5224,4 +5229,14 @@ li.UserMovieHistory__last___15Tz7 {
   overflow: hidden;
   position: relative;
   z-index: 1;
+}
+.BaikeCommon__summary_side___jkT1I{
+    float: right;
+    margin-left: 30px;
+    margin-top:0;
+}
+
+.BaikeCommon__summary___1SPO3{
+    float: left;
+    width: 720px;
 }
