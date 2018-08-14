@@ -95,7 +95,8 @@
 						<div id="BaikeCommon__summary_wrapper___5T2oW">
 							<div class="BaikeCommon__summary_content___1XNU1">
 								<h1 style="width:720px;float:left">${movie.title}</h1>
-								<div class="BaikeCommon__basic_info___1AP4H">
+								<div style="float:left;width:730px;">
+								<div class="BaikeCommon__basic_info___1AP4H" style="width:790px;">
 									<dl class="BaikeCommon__basic_info_left___Gu5JP">
 										<div>
 											<dt
@@ -191,11 +192,15 @@
 									</dl>
 									<div class="clearfix"></div>
 								</div>
-								<div class="BaikeCommon__summary_side___jkT1I">
-								<img
-									src="${movie.img_url}">
-							</div>
-								<div class="BaikeCommon__summary___1SPO3">   简介：${movie.introduce}</div>
+								<div class="BaikeCommon__summary___1SPO3" style="
+    margin-bottom: 20px;
+								">   简介：${movie.introduce}</div>
+								</div>
+								<div class="BaikeCommon__summary_side___jkT1I" style="margin-top:0;">
+									<img
+										src="${movie.img_url}" style="max-width:285px;">
+								</div>
+								
 							
 						</div>
 						<div class="clearfix"></div>
@@ -257,7 +262,7 @@
 										class="">
 										<div class="MovieResources__download_tips___2fS0o">
 											<ul>
-												<li>智能匹配是磁力猫通过深度挖掘和智能算法匹配到的资源</li>
+												<li>智能匹配是Python通过深度挖掘和智能算法匹配到的资源</li>
 												<li><b>通常越靠前的资源可信度越高</b>，但并不保证所有结果都正确可用</li>
 												<li>当标题含<b>TS、TC、CAM</b>字样时，说明是<b>非高清/枪版</b></li>
 												<li>下载、资源不对问题可查看 <a target="_blank"

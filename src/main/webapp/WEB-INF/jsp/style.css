@@ -38,8 +38,6 @@ dd {
 }
 @font-face {
   font-family: "iconfont";
-  src: url(/output//iconfont.de32e0.eot);
-  src: url(/output//iconfont.de32e0.eot) format('embedded-opentype'), url(/output//iconfont.d50d7d.woff) format('woff'), url(/output//iconfont.b40449.ttf) format('truetype'), url(/output//iconfont.373654.svg) format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
