@@ -1,5 +1,6 @@
 package com.xyf.web.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +13,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.xuyuanfeng.utlis.CommonUtils;
 import com.xuyuanfeng.utlis.RecordUtils;
+import com.xuyuanfeng.utlis.RedisUtils;
 import com.xyf.dao.MovieDao;
+import com.xyf.pojo.HotKeys;
 import com.xyf.pojo.Movies;
 import com.xyf.service.ElasticSearchRestFullService;
 
@@ -26,6 +29,8 @@ public class CoreController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView index() {
 		ModelAndView modelAndView = new ModelAndView("index");
+		List<HotKeys> lsh=RedisUtils.getHotKeyList();//获取热搜字段
+		modelAndView.addObject("lsh",lsh);
 		return modelAndView;
 	}
 	@RequestMapping(value = "/search.do", method = RequestMethod.GET)
@@ -34,9 +39,12 @@ public class CoreController {
 			return new ModelAndView("500");
 		}
 		RecordUtils.record(req, text);
+		List<HotKeys> lsh=RedisUtils.getHotKeyList();//获取热搜字段
 		ModelAndView modelAndView = new ModelAndView("index");
 		Map<String, Object> msg=restService.search(text, 1, "moviesdb");
 		modelAndView.addObject("msg",msg);
+		modelAndView.addObject("lsh",lsh);
+
 		return modelAndView;
 	}
 	@RequestMapping(value = "/pageSearch.do", method = RequestMethod.GET)
@@ -46,10 +54,12 @@ public class CoreController {
 			return new ModelAndView("500");
 		}
 		RecordUtils.record(req, text);
+		List<HotKeys> lsh=RedisUtils.getHotKeyList();//获取热搜字段
 		ModelAndView modelAndView = new ModelAndView("index");
 		int current=cur.intValue();
 		Map<String, Object> msg=restService.search(text, current, "moviesdb");
 		modelAndView.addObject("msg",msg);
+		modelAndView.addObject("lsh",lsh);
 		return modelAndView;
 	}
 	/**
@@ -99,6 +109,11 @@ public class CoreController {
         modelAndView.addObject("movie",m);      
 		return modelAndView;
 	}
-	
 
+	@RequestMapping("/setHotKey.do")
+	public ModelAndView setHotKey() {
+		ModelAndView modelAndView = new ModelAndView("success");
+		RedisUtils.setHotKeyList();//设置热搜  
+		return modelAndView;
+	}
 }

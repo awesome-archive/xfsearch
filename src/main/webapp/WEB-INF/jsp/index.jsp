@@ -1,7 +1,9 @@
-<%@page import="com.xuyuanfeng.utlis.HTMLUtils"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="com.xuyuanfeng.utlis.HTMLUtils"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -100,14 +102,26 @@
 				<button type="submit" class="btn btn-info col-lg-1 col-xs-2"
 					onclick="ruSearch()" style="border-radius: 0px;">搜索</button>
 			</div>
+			
 			<div class="search_keyword">
 				<p class="text-muted">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;热搜关键词: <a
-						href="./search.do?text=西虹市首富">西虹市首富&nbsp;&nbsp;&nbsp;</a> <a
-						href="./search.do?text=肖申克救赎">肖申克救赎&nbsp;&nbsp;&nbsp;</a> <a
-						href="./search.do?text=超时空同居">超时空同居&nbsp;&nbsp;&nbsp;</a> <a
-						href="./search.do?text=与神同行">与神同行&nbsp;&nbsp;&nbsp;</a> <a
-						href="./search.do?text=死侍2">死侍2&nbsp;&nbsp;&nbsp;</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;热搜关键词:
+					<c:forEach items="${lsh}" var="hot">
+
+						<c:set var="key" value="${hot.text}"></c:set>
+						<c:choose>
+							<c:when test="${fn:length(key) > 5}">
+                            <c:set var="string" value="${fn:substring(key, 0, 5)}" />
+							 <a href="javascript:void(0)"
+							   onclick="hotSearch('${hot.text}')">${string}&nbsp;&nbsp;&nbsp;</a>
+							</c:when>
+							<c:otherwise>
+								<a href="javascript:void(0)"
+									onclick="hotSearch('${hot.text}')">${hot.text}&nbsp;&nbsp;&nbsp;</a>
+							</c:otherwise>
+						</c:choose>
+
+					</c:forEach>
 				</p>
 			</div>
 			<br />

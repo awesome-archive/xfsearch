@@ -10,8 +10,5 @@
         <plugin interceptor="com.github.pagehelper.PageHelper"></plugin>
     </plugins>
     
-    <mappers>
-        <package name="com.xyf.mapper"/>
-    </mappers>
-
+  
 </configuration>

@@ -249,6 +249,14 @@ $(document).ready(function(){
 		text = encodeURIComponent(text);
 		window.location.href = "./search.do?text=" + text ;
         }
+	function hotSearch(text) {
+
+		if (text == null || text == "") {
+			return;
+		}
+		text = encodeURIComponent(text);
+		window.location.href = "./search.do?text=" + text;
+	}
 	function EnterPress(e,value){ //传入 event 
 		var e = e || window.event; //兼容ie
 		if(e.keyCode == 13){ 

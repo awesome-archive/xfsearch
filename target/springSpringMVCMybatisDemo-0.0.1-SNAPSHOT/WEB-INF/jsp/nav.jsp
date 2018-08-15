@@ -23,6 +23,26 @@ li {
 	margin-left: 0px
 }
 
+.pay-menu{
+	width:320px;
+}
+		.pay_img{
+			width:150px;
+			height:150px;
+			display:block;
+		}
+		
+		.pay>p{
+			text-align:center;
+		}
+		
+		.pay{
+			float:left;
+			display:block;
+			height:200px;
+			width:150px;
+			padding:10px;
+		}
 .page-bar a {
 	border: 1px solid #ddd;
 	text-decoration: none;
@@ -34,6 +54,7 @@ li {
 	color: #337ab7;
 	cursor: pointer
 }
+
 
 .page-bar a:hover {
 	background-color: #eee;
@@ -150,6 +171,18 @@ li {
 	margin: 0px 4px;
 	font-size: 12px;
 }
+.img-thumbnail {
+    display: inline-block;
+    height: 200px;
+    max-width: 100%;
+    padding: 4px;
+    line-height: 1.428571429;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
   @media (max-width: 768px) {
    .Hhhhhh{
     width:320px;
@@ -165,6 +198,17 @@ li {
  
 </style>
 <script type="text/javascript">
+
+$(document).ready(function(){
+    $("#dropdownMenu1").mouseover(function(){
+       $("#dropdownMenu1").click();
+    });
+    $("#dropdownMenu1").mouseout(function(){
+        $(this).click();    
+    });
+  })
+  
+  
 	function btnType(type) 
 	{
 		var text = document.getElementById("input").value;
@@ -172,6 +216,8 @@ li {
        	{
        		return ;
        	}
+		text = encodeURIComponent(text);
+
 		window.location.href = "./index.do?type=" + type + "&text=" + text;
 		return false;
        }
@@ -181,6 +227,7 @@ li {
        	{
        		return ;
        	}
+		text = encodeURIComponent(text);
 		window.location.href = "./pageSearch.do?text=" + text +  "&cur=" + cur;
 		
         }
@@ -190,6 +237,7 @@ li {
        	{
        		return ;
        	}
+		text = encodeURIComponent(text);
 		window.location.href = "./pageIndex.do?text=" + text +  "&cur=" + cur+ "&type="+type;
         }
 	function  ruSearch() {
@@ -198,6 +246,7 @@ li {
        	{
        		return ;
        	}
+		text = encodeURIComponent(text);
 		window.location.href = "./search.do?text=" + text ;
         }
 	function EnterPress(e,value){ //传入 event 
@@ -207,6 +256,7 @@ li {
 			{
 				return ;
 			}
+			value = encodeURIComponent(value);
 			window.location.href = "./search.do?text=" + value ;
 		} 
 		} 
