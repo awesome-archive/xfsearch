@@ -216,6 +216,8 @@ $(document).ready(function(){
        	{
        		return ;
        	}
+		text = encodeURIComponent(text);
+
 		window.location.href = "./index.do?type=" + type + "&text=" + text;
 		return false;
        }
@@ -225,6 +227,7 @@ $(document).ready(function(){
        	{
        		return ;
        	}
+		text = encodeURIComponent(text);
 		window.location.href = "./pageSearch.do?text=" + text +  "&cur=" + cur;
 		
         }
@@ -234,6 +237,7 @@ $(document).ready(function(){
        	{
        		return ;
        	}
+		text = encodeURIComponent(text);
 		window.location.href = "./pageIndex.do?text=" + text +  "&cur=" + cur+ "&type="+type;
         }
 	function  ruSearch() {
@@ -242,6 +246,7 @@ $(document).ready(function(){
        	{
        		return ;
        	}
+		text = encodeURIComponent(text);
 		window.location.href = "./search.do?text=" + text ;
         }
 	function EnterPress(e,value){ //传入 event 
@@ -251,6 +256,7 @@ $(document).ready(function(){
 			{
 				return ;
 			}
+			value = encodeURIComponent(value);
 			window.location.href = "./search.do?text=" + value ;
 		} 
 		} 
