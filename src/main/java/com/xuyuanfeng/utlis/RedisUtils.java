@@ -86,7 +86,7 @@ public class RedisUtils {
 		jedis = jedisPool.getResource();
 		HotKeysDao hst = new HotKeysDao();
 		List<HotKeys> ls = hst.getHotKey();
-	    jedis.set("RupengHotSearchKeyList", gson.toJson(ls));
+	    jedis.set("xuanfengHotSearchKeyList", gson.toJson(ls));
 		jedis.close();// 释放jedis
 	}
 	
@@ -94,7 +94,7 @@ public class RedisUtils {
 		Gson gson =new Gson();
 		Jedis jedis = null;
 		jedis = jedisPool.getResource();
-	    String value=jedis.get("RupengHotSearchKeyList");
+	    String value=jedis.get("xuanfengHotSearchKeyList");
 	    JsonParser parser = new JsonParser();
 	    JsonArray Jarray = parser.parse(value).getAsJsonArray();
 	    ArrayList<HotKeys> lcs = new ArrayList<HotKeys>();
