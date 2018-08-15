@@ -12,7 +12,15 @@ public class Movies {
 	private String main_actor;// 主演
 	private String download_url;// 下载地址
 	private String img_url;// 图片下载地址
-
+    
+	
+	
+	
+	
+	
+	
+	
+	
 	public Long getId() {
 		return id;
 	}

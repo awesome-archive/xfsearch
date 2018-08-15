@@ -127,9 +127,19 @@
 								<h4>
 									<u> <a href="<%=ctxPath%>/get.do?id=${item.id}">
 											<p>${item.title}&nbsp;&nbsp;
-									</a> <a href="${item.download_url}" target="_blank">
+									</a> 
+									<c:if test="${item.download_url!=null}">
+									<a href="${item.download_url}" target="_blank">
 											<button class="label label-success">点击下载</button>
 									</a>
+									</c:if>
+									<c:if test="${item.download_url==null}">
+									<a href="${item.download_url}" target="_blank">
+											<button class="label label-error">暂未上线</button>
+									</a>
+									</c:if>
+									
+									
 										</p>
 									</u>
 								</h4>
