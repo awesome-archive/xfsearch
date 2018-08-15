@@ -4,7 +4,7 @@
         <Console name="CONSOLE" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n" />
         </Console>
-        <RollingFile name="ROLLING" fileName="/logs/rupeng-front-search/log.log"
+        <RollingFile name="ROLLING" fileName="/logs/xuanfeng-search/log.log"
              filePattern="/logs/log_%d{yyyy-MM-dd}_%i.log">
             <PatternLayout pattern="%d %p %c{1.} [%t] %m%n"/>
             <Policies>

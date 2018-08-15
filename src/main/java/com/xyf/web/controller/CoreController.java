@@ -109,7 +109,10 @@ public class CoreController {
         modelAndView.addObject("movie",m);      
 		return modelAndView;
 	}
-
+/**
+ * 系统启动后需要先设置热搜 否则无法启动
+ * @return
+ */
 	@RequestMapping("/setHotKey.do")
 	public ModelAndView setHotKey() {
 		ModelAndView modelAndView = new ModelAndView("success");
