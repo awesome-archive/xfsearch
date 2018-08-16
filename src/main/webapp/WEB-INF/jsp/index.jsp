@@ -99,7 +99,7 @@
 						onkeypress="EnterPress(event,value)"
 						onkeydown="EnterPress(event,value)" style="border-radius: 0px;" />
 				</div>
-				<button type="submit" class="btn btn-success col-lg-1 col-xs-2"
+				<button type="submit" class="btn btn-primary col-lg-1 col-xs-2"
 					onclick="ruSearch()" style="border-radius: 0px;">搜索</button>
 			</div>
 

@@ -14,7 +14,6 @@ public class TimeTask {
 
 	public void doTask() {
 		
-		
        		RedisUtils.setHotKeyList();//设置热搜  
        		logger.debug("每日热搜设置成功");
 		

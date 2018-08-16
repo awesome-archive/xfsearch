@@ -48,8 +48,7 @@ import com.xyf.pojo.Movies;
 @Service
 public class ElasticSearchRestFullService {
 
-	private static final Logger logger = LogManager.getLogger(
-			"------Rest ---Elastic操作日志------ 时间:" + new SimpleDateFormat("yy-MM-dd hh:mm:ss").format(new Date()));
+	private static final Logger logger = LogManager.getLogger(ElasticSearchRestFullService.class);
 
 	
 	/**
