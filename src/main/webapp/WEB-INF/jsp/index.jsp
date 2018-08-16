@@ -99,10 +99,10 @@
 						onkeypress="EnterPress(event,value)"
 						onkeydown="EnterPress(event,value)" style="border-radius: 0px;" />
 				</div>
-				<button type="submit" class="btn btn-info col-lg-1 col-xs-2"
+				<button type="submit" class="btn btn-success col-lg-1 col-xs-2"
 					onclick="ruSearch()" style="border-radius: 0px;">搜索</button>
 			</div>
-			
+
 			<div class="search_keyword">
 				<p class="text-muted">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;热搜关键词:
@@ -111,13 +111,11 @@
 						<c:set var="key" value="${hot.text}"></c:set>
 						<c:choose>
 							<c:when test="${fn:length(key) > 5}">
-                            <c:set var="string" value="${fn:substring(key, 0, 5)}" />
-							 <a href="javascript:void(0)"
-							   onclick="hotSearch('${hot.text}')">${string}&nbsp;&nbsp;&nbsp;</a>
+								<c:set var="string" value="${fn:substring(key, 0, 5)}" />
+								<a href="javascript:void(0)" onclick="hotSearch('${hot.text}')">${string}&nbsp;&nbsp;&nbsp;</a>
 							</c:when>
 							<c:otherwise>
-								<a href="javascript:void(0)"
-									onclick="hotSearch('${hot.text}')">${hot.text}&nbsp;&nbsp;&nbsp;</a>
+								<a href="javascript:void(0)" onclick="hotSearch('${hot.text}')">${hot.text}&nbsp;&nbsp;&nbsp;</a>
 							</c:otherwise>
 						</c:choose>
 
@@ -139,28 +137,29 @@
 							<c:forEach items="${msg.itemsList}" var="item">
 
 								<h4>
-									<u> <a href="<%=ctxPath%>/get.do?id=${item.id}">
-											<p>${item.title}&nbsp;&nbsp;
-									</a> 
-									<c:if test="${item.download_url!=null}">
-									<a href="${item.download_url}" target="_blank">
-											<button class="label label-success">点击下载</button>
-									</a>
-									</c:if>
-									<c:if test="${item.download_url==null}">
-									<a href="${item.download_url}" target="_blank">
-											<button class="label label-error">暂未上线</button>
-									</a>
-									</c:if>
-									
-									
+									<u> <p><a href="<%=ctxPath%>/get.do?id=${item.id}">
+										${item.title}&nbsp;&nbsp;
+										</a> 
+											<c:if test="${item.download_url!=null}">
+												<a href="${item.download_url}" target="_blank">
+													<button class="label label-success">点击下载</button>
+												</a>
+											</c:if> 
+											<c:if test="${item.download_url==null}">
+												<a href="${item.download_url}" target="_blank">
+													<button class="label label-error">暂未上线</button>
+												</a>
+											</c:if>
 										</p>
 									</u>
 								</h4>
-								<p>
-									<a href=""><img class="img-thumbnail img-responsive"
-										src="${item.img_url}"> </a>
-								<p>${item.introduce}</p>
+								
+									<p>
+										<a href=""><img class="img-thumbnail img-responsive" style="width: 160px;height:200px;display: block;"
+											src="${item.img_url}"/> </a>
+									</p>
+									<p>${item.introduce}</p>
+								
 								<br />
 							</c:forEach>
 							<!-- 							分页代码 -->

@@ -12,7 +12,7 @@ public class Movies {
 	private String main_actor;// 主演
 	private String download_url;// 下载地址
 	private String img_url;// 图片下载地址
-    
+	private String local_img_url;//图片本地路径
 	
 	
 	
@@ -21,6 +21,14 @@ public class Movies {
 	
 	
 	
+	public String getLocal_img_url() {
+		return local_img_url;
+	}
+
+	public void setLocal_img_url(String local_img_url) {
+		this.local_img_url = local_img_url;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -113,7 +121,7 @@ public class Movies {
 	public String toString() {
 		return "Movies [id=" + id + ", title=" + title + ", year=" + year + ", country=" + country + ", lan=" + lan
 				+ ", douban_link=" + douban_link + ", introduce=" + introduce + ", main_actor=" + main_actor
-				+ ", download_url=" + download_url + ", img_url=" + img_url + "]";
+				+ ", download_url=" + download_url + ", img_url=" + img_url + ", local_img_url=" + local_img_url + "]";
 	}
 
 }

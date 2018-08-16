@@ -193,12 +193,12 @@
 									<div class="clearfix"></div>
 								</div>
 								<div class="BaikeCommon__summary___1SPO3" style="
-    margin-bottom: 20px;
+                                 margin-bottom: 20px;
 								">   简介：${movie.introduce}</div>
 								</div>
 								<div class="BaikeCommon__summary_side___jkT1I" style="margin-top:0;">
 									<img
-										src="${movie.img_url}" style="max-width:285px;">
+										src="${movie.img_url}" style="max-width:285px;width: 260px;">
 								</div>
 								
 							

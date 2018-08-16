@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.xuyuanfeng.utlis.CommonUtils;
+import com.xuyuanfeng.utlis.DownloadImage;
 import com.xuyuanfeng.utlis.RecordUtils;
 import com.xuyuanfeng.utlis.RedisUtils;
 import com.xyf.dao.MovieDao;
@@ -82,12 +83,12 @@ public class CoreController {
 		return modelAndView;
 	}
 	/**
-	 * ok 创建所有索引 删除整个库 管理
+	 * //將圖片下載
 	 */
 	@RequestMapping("/download.do")
 	public ModelAndView download() {
-
-		ModelAndView modelAndView = new ModelAndView("download");
+		ModelAndView modelAndView = new ModelAndView("success");
+		DownloadImage.Download();
 		return modelAndView;
 	}
 	/**
