@@ -1,0 +1,401 @@
+	/*public*/
+	
+	table tr td {
+		border: 0px solid transparent !important;
+	}
+	
+	*{
+		text-decoration: none;
+		list-style: none;
+	}
+	
+	a:hover {
+		text-decoration: none;
+	}
+	
+	.hide {
+		display: none;
+	}
+	
+	
+	ul,
+	li {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	li {
+		list-style: none
+	}
+	
+	.pay-menu {
+		width: 334px;	
+	}
+	
+	.pay_img {
+		width: 150px;
+		height: 150px;
+		display: block;
+	}
+	
+	.pay>p {
+		margin-top: 10px;
+		text-align: center;
+	}
+	
+	.pay {
+		float: left;
+		display: block;
+		height: 200px;
+		width: 150px;
+		margin: 10px 10px 10px 5px;
+	}
+	
+	.pay-menu>.pay:first-child{
+		margin: 10px 5px 10px 10px;
+	} 
+	
+	.navbar-inverse .navbar-nav>li>a {
+		color: #fff;
+	}
+	
+	body,
+	html {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		font-size: 16px;
+		color: #333;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-font-smoothing: antialiased;
+	}
+	* {
+		-webkit-font-smoothing: antialiased;
+		font-family: arial, "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "Hiragino Sans GB", tahoma, simsun, "\5B8B\4F53";
+	}
+
+	#wrapper {
+		min-width: 1100px;
+		height: 100%;
+	}
+	
+	.hidden {
+		display: none !important;
+	}
+	.show {
+		display: block !important;
+	}
+	.clearfix {
+		height: 0;
+		clear: both;
+	}
+
+	
+	
+	
+	#MovieResources {
+		font-size: 13px;
+		margin-top: 10px;
+		position: relative;
+	}
+	#MovieResources .MovieResources__download {
+		color: #666;
+		padding-bottom: 10px;
+		padding-left: 24px;
+	}
+	#MovieResources .MovieResources__download a {
+		color: #666;
+	}
+	#MovieResources .MovieResources__download li {
+		line-height: 24px;
+		list-style: disc !important;
+	}
+	
+	#MovieResources table {
+		width: 100%;
+	}
+	#MovieResources table td {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	#MovieResources table tr {
+		height: 40px;
+	}
+	#MovieResources table .MovieResources__tr_title td {
+		font-weight: bold;
+	}
+	#MovieResources table .MovieResources__tr_title td.MovieResources__td_size{
+		width: 10%;
+	}
+	#MovieResources table .MovieResources__tr_title td.MovieResources__td_resolution {
+		width: 10%;
+	}
+	#MovieResources table .MovieResources__tr_title td.MovieResources__td_time {
+		width: 10%;
+	}
+	#MovieResources table .MovieResources__tr_title td.MovieResources__td_download {
+		width: 10%;
+	}
+	#MovieResources table .MovieResources__tr_title td.MovieResources__td_subtitle {
+		width: 10%;
+	}
+	#MovieResources table td.MovieResources__td_name {
+		width: 50%;
+		text-align: left;
+		word-break: break-all;
+		overflow: hidden;
+		padding: 10px 0;
+		padding-left: 5px;
+	}
+	
+	
+	#MovieResources #MovieResources__self_sources_list tr:nth-child(even) {
+		background-color: #f3f2f2;
+	}
+	#MovieResources .MovieResources__self_resouces_icon li {
+		width: 60px;
+		height: 26px;
+		line-height: 26px;
+		text-align: center;
+		display: inline-block;
+		margin-right: 6px;
+		vertical-align: top;
+		color: #fff;
+		font-size: 12px;
+		border-radius: 3px;
+	}
+	#MovieResources .MovieResources__self_resouces_icon li a {
+		text-decoration: none;
+	}
+	#MovieResources .MovieResources__self_resouces_icon li i {
+		font-size: 12px;
+		padding-right: 3px;
+		vertical-align: 1px;
+	}
+	#MovieResources .MovieResources__self_resouces_icon li.MovieResources__ci_icon {
+		background-color: #e10000;
+	}
+	#MovieResources .MovieResources__self_resouces_icon li.MovieResources__ci_icon a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.MovieResources__show_more {
+		width: 200px;
+		margin: 0 auto;
+		margin-top: 10px;
+		text-align: center;
+		height: 30px;
+		border-radius: 3px;
+		line-height: 30px;
+		background: #f9f9f9;
+		color: #333;
+		border: 1px solid #ececec;
+		font-size: 13px;
+		cursor: pointer;
+	}
+	.MovieResources__show_more:hover {
+		color: #000;
+	}
+
+	
+	
+	.ResoucesTab__sources_tab_wrapper {
+		margin-top: 10px;
+	}
+	.ResoucesTab__sources_tab_wrapper .ResoucesTab__sources_tab {
+		border-bottom: 1px solid #efeeee;
+		position: relative;
+	}
+	.ResoucesTab__sources_tab_wrapper .ResoucesTab__sources_tab>span,
+	.ResoucesTab__sources_tab_wrapper .ResoucesTab__sources_tab a {
+		font-size: 13px;
+		display: inline-block;
+		width: 100px;
+		text-align: center;
+		height: 32px;
+		line-height: 34px;
+		text-decoration: none;
+		cursor: pointer;
+		color: #4194fb;
+		position: relative;
+	}
+	.ResoucesTab__sources_tab_wrapper .ResoucesTab__sources_tab span.ResoucesTab__sources_tab_highlight,
+	.ResoucesTab__sources_tab_wrapper .ResoucesTab__sources_tab a.ResoucesTab__sources_tab_highlight {
+		border: 1px solid #efeeee;
+		border-bottom-color: #fff;
+		margin-bottom: -1px;
+		color: #000;
+	}
+	.ResoucesTab__sources_tab_wrapper .ResoucesTab__sources_tab em.ResoucesTab__new_tips {
+		position: absolute;
+		background-color: #fa4f0b;
+		color: #fff;
+		right: -3px;
+		top: -5px;
+		padding: 0 2px;
+		font-size: 12px;
+		line-height: 14px;
+		display: inline-block;
+		border-radius: 3px;
+	}
+	
+	#ResoucesTab__episode {
+		margin-top: 20px;
+	}
+	#ResoucesTab__episode li {
+		position: relative;
+		background-color: #FFF;
+		float: left;
+		list-style: none;
+		width: 60px;
+		text-align: center;
+	}
+	#ResoucesTab__episode li a {
+		display: inline-block;
+		width: 100%;
+		height: 45px;
+		line-height: 45px;
+		text-decoration: none;
+		background: #fbfcff;
+		border: 1px solid #d8e1f2;
+		margin-left: -1px;
+		margin-top: -1px;
+		cursor: pointer;
+		font-size: 16px;
+		color: #333;
+	}
+	#ResoucesTab__episode li a:hover {
+		background-color: #eaf0fa;
+	}
+	
+
+
+	
+	
+	#BaikeCommon__baike_container {
+		min-height: 100%;
+		position: relative;
+	}
+	#BaikeCommon__container {
+		width: 100%;
+		min-height: 100%;
+		background-color: #f5f5f5!important;
+	}
+	#BaikeCommon__container #BaikeCommon__before_container {
+		position: relative;
+	}
+	#BaikeCommon__container #BaikeCommon__before_container #BaikeCommon__bg_wapper {
+		position: relative;
+		z-index: 1;
+		margin-bottom: -240px;
+		height: 420px;
+		background-position: center top;
+		background-repeat: no-repeat;
+	}
+	
+	#BaikeCommon__content_wrapper {
+		width: 1200px;
+		position: relative;
+		margin: 0 auto;
+		margin-top: -360px;
+		background-color: #fff;
+		border: 1px solid #e5e5e5;
+		z-index: 1;
+		padding: 30px 30px 50px 30px;
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__summary_content {
+		float: left;
+		position: relative;
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__summary_content h1 {
+		width:800px;
+		float:left;
+		font-size: 34px;
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__summary_content .BaikeCommon__summary {
+		text-indent: 32px;
+		margin-top: 10px;
+		float:left;
+		width:800px;
+		font-size: 14px;
+		line-height: 24px;
+		margin-bottom: 20px;
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__summary_side {
+		float: left;
+		width: 260px;
+		border: solid 1px #ddd;
+		text-align: center;
+		margin-top: 10px;
+		margin-top:0;
+	    position: relative;
+	    bottom: 40px;
+	    left: 50px;
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__summary_side img {
+		margin-top: 0;
+		max-width:260px;
+		width: 260px;
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__basic_info {
+		float: left;
+		width: 800px;
+		margin: 20px 0 0;
+		clear: both;
+		background: url(https://baike.bdimg.com/static/wiki-lemma/widget/lemma_content/mainContent/basicInfo/img/basicInfo-bg_7819f20.png);
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__basic_info .BaikeCommon__basic_info_left {
+		width: 395px;
+		float: left;
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__basic_info .BaikeCommon__basic_info_right {
+		width: 395px;
+		float: left;
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__basic_info a {
+		color: #136ec2;
+		text-decoration: none;
+	}
+	#BaikeCommon__summary_wrapper .BaikeCommon__basic_info a:hover {
+		text-decoration: underline;
+	}
+	.BaikeCommon__basic_info_item {
+		line-height: 26px;
+		display: block;
+		float: left;
+		font-size: 13px;
+	}
+	.BaikeCommon__basic_info_name {
+		width: 90px;
+		padding: 0 5px 0 12px;
+		font-weight: 700;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		word-wrap: normal;
+		color: #999;
+	}
+	.BaikeCommon__basic_info_value {
+		zoom: 1;
+		color: #333;
+		width: 285px;
+		float: left;
+		position: relative;
+		word-break: break-all;
+	}
+	
+	.Movie__resources_wrapper {
+		margin-top: 12px;
+	}
+
+	.content{
+		float:left;
+		width:790px;
+	}
+	
+	footer{
+		text-align: center;
+		margin-top: 20px;
+	}

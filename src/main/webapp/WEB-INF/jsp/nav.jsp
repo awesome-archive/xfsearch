@@ -1,273 +1,87 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<style type="text/css">
-/*public*/
-.hide {
-	display: none;
-}
+	<!-- 顶部导航 -->
+		<br/>
+		<br/>
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+			<div class="container col-md-offset-2">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">切换导航</span> <span class="icon-bar"></span> <span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="">
+							<a href="./" class="">首页</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">关于我们
+								<span class="caret"></span>
+							</a>
+							<div class="dropdown-menu about-menu" role="menu">
+								<p><img src="./images/lyqlogo.jpg" alt="图片找不到了"/></p>
+								<p class="about-introduce">
+									<span>
+									我们是一个团队，名为聚源工作室，此项目为开源项目，Github地址为:
+									<a href="https://github.com/RAOE/xfsearch" target="_blank">
+										开源地址
+									</a>
+									,如果你对此网站有什么建议或者意见，请联系
+									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=986771570&site=qq&menu=yes">QQ:986771570</a>
+									</span>
+								</p>
+							</div>
+						</li>
+						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown">捐助我们
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu pay-menu" role="menu">
+								<div class="pay">
+									<div>
+										<img src="./images/wechat.jpg" class="pay_img">
+									</div>
+									<p>微信支付</p>
+								</div>
+								<div class="pay">
+									<div>
+										<img src="./images/payjpg.jpg" class="pay_img">
+									</div>
+									<p>支付宝</p>
+								</div>
+								<table class="table text-center">
+									<caption class="text-center">鸣谢名单</caption>
+									<tr>
+										<td>用户名</td>
+										<td>捐助金额</td>
+										<td>支付方式</td>
+									</tr>
 
-.page-bar {
-	margin: 40px;
-}
-
-ul, li {
-	margin: 0px;
-	padding: 0px;
-}
-
-li {
-	list-style: none
-}
-
-.page-bar li:first-child>a {
-	margin-left: 0px
-}
-
-.pay-menu{
-	width:320px;
-}
-		.pay_img{
-			width:150px;
-			height:150px;
-			display:block;
-		}
-		
-		.pay>p{
-			text-align:center;
-		}
-		
-		.pay{
-			float:left;
-			display:block;
-			height:200px;
-			width:150px;
-			padding:10px;
-		}
-.page-bar a {
-	border: 1px solid #ddd;
-	text-decoration: none;
-	position: relative;
-	float: left;
-	padding: 6px 12px;
-	margin-left: -1px;
-	line-height: 1.42857143;
-	color: #337ab7;
-	cursor: pointer
-}
-
-
-.page-bar a:hover {
-	background-color: #eee;
-}
-
-.page-bar a.banclick {
-	cursor: not-allowed;
-}
-
-.page-bar .active a {
-	color: #fff;
-	cursor: default;
-	background-color: #337ab7;
-	border-color: #337ab7;
-}
-
-.page-bar i {
-	font-style: normal;
-	color: #d44950;
-	margin: 0px 4px;
-	font-size: 12px;
-}
-
-/*顶部*/
-.navbar-collapse {
+									<tr>
+										<td>虚伪的世界</td>
+										<td>1.00元</td>
+										<td>微信支付</td>
+									</tr>
+									<tr>
+										<td>好大王</td>
+										<td>5.00元</td>
+										<td>微信支付</td>
+									</tr>
+									<tr>
+										<td>风中雪</td>
+										<td>2.00元</td>
+										<td>支付宝支付</td>
+									</tr>
+								</table>
+							</ul>
+						</li>
+						<li>
+							<a href="">登录</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	
-}
-
-.top {
-	width: 100%;
-	height: 200px;
-	background-color: #FBFBF9;
-	margin-top: 50px;
-}
-
-.search {
-	position: relative;
-	top: 40%;
-	transform: translateY(-40%);
-}
-
-.text-list {
-	padding-top: 10px;
-}
-
-.text-right-list {
-	
-}
-
-.text-right-list ul {
-	margin-top: 20px;
-}
-
-.text-right-list li {
-	padding-top: 5px;
-	list-style: none;
-}
-/*搜索关键词*/
-.search_keyword {
-	margin-top: 40px;
-}
-
-.search_keyword p a {
-	color: #777;
-}
-
-.page-bar {
-	margin: 40px;
-}
-
-ul, li {
-	margin: 0px;
-	padding: 0px;
-}
-
-li {
-	list-style: none
-}
-
-.page-bar li:first-child>a {
-	margin-left: 0px
-}
-
-.page-bar a {
-	border: 1px solid #ddd;
-	text-decoration: none;
-	position: relative;
-	float: left;
-	padding: 6px 12px;
-	margin-left: -1px;
-	line-height: 1.42857143;
-	color: #337ab7;
-	cursor: pointer
-}
-
-.page-bar a:hover {
-	background-color: #eee;
-}
-
-.page-bar a.banclick {
-	cursor: not-allowed;
-}
-
-.page-bar .active a {
-	color: #fff;
-	cursor: default;
-	background-color: #337ab7;
-	border-color: #337ab7;
-}
-
-.page-bar i {
-	font-style: normal;
-	color: #d44950;
-	margin: 0px 4px;
-	font-size: 12px;
-}
-.img-thumbnail {
-    display: inline-block;
-    height: 200px;
-    max-width: 100%;
-    padding: 4px;
-    line-height: 1.428571429;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-  @media (max-width: 768px) {
-   .Hhhhhh{
-    width:320px;
-  }
-  @media (min-width: 768px){
-  	.nav-right{
-  		float:right;
-  	}
-  	.img-left{
-  		float:left !important;
-  	}
-}
- 
-</style>
-<script type="text/javascript">
-
-$(document).ready(function(){
-    $("#dropdownMenu1").mouseover(function(){
-       $("#dropdownMenu1").click();
-    });
-    $("#dropdownMenu1").mouseout(function(){
-        $(this).click();    
-    });
-  })
-  
-  
-	function btnType(type) 
-	{
-		var text = document.getElementById("input").value;
-		if(text==null||type==null||text==""||type=="")
-       	{
-       		return ;
-       	}
-		text = encodeURIComponent(text);
-
-		window.location.href = "./index.do?type=" + type + "&text=" + text;
-		return false;
-       }
-	function gotoA(cur) {
-       	var text = document.getElementById("input").value;
-    	if(text==null||cur==null||text==""||cur==0)
-       	{
-       		return ;
-       	}
-		text = encodeURIComponent(text);
-		window.location.href = "./pageSearch.do?text=" + text +  "&cur=" + cur;
-		
-        }
-	function gotoT(cur,type) {
-       	var text = document.getElementById("input").value;
-    	if(text==null||cur==null||text==""||cur==0)
-       	{
-       		return ;
-       	}
-		text = encodeURIComponent(text);
-		window.location.href = "./pageIndex.do?text=" + text +  "&cur=" + cur+ "&type="+type;
-        }
-	function  ruSearch() {
-	    var text = document.getElementById("input").value;
-       	if(text==null||text=="")
-       	{
-       		return ;
-       	}
-		text = encodeURIComponent(text);
-		window.location.href = "./search.do?text=" + text ;
-        }
-	function hotSearch(text) {
-
-		if (text == null || text == "") {
-			return;
-		}
-		text = encodeURIComponent(text);
-		window.location.href = "./search.do?text=" + text;
-	}
-	function EnterPress(e,value){ //传入 event 
-		var e = e || window.event; //兼容ie
-		if(e.keyCode == 13){ 
-			if(value==null||value=="")
-			{
-				return ;
-			}
-			value = encodeURIComponent(value);
-			window.location.href = "./search.do?text=" + value ;
-		} 
-		} 
-	
-	
-</script>

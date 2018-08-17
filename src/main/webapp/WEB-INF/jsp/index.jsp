@@ -17,93 +17,22 @@
 %>
 <%@include file="/WEB-INF/jsp/header.jsp"%>
 </head>
-<link rel="stylesheet" type="text/css"
-	href="<%=ctxPath%>/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="<%=ctxPath%>/css/style.css">
+<link rel="icon" href="<%=ctxPath%>/images/" type="image/x-icon" />
 <title>搜搜影库</title>
 </head>
-<%@include file="/WEB-INF/jsp/nav.jsp"%>
 <body>
-	<!-- 顶部导航 -->
-	<!-- 顶部导航 -->
-	<br />
-	<br />
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation"
-		id="menu-nav">
-
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="sr-only">切换导航</span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span>
-				</button>
-			</div>
-			<!-- 
-            -->
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav nav-right">
-					<li><a href="./" style="color: #fff;" href="">首页</a></li>
-
-					<li><a style="color: #fff;" href="">关于我们</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						id="dropdownMenu1" data-toggle="dropdown" style="color: #fff;">捐助我们
-							<span class="caret"></span>
-					</a>
-						<ul class="dropdown-menu pay-menu" role="menu">
-							<div class="pay">
-								<div>
-									<img src="<%=ctxPath%>/images/wechat.jpg" class="pay_img" />
-								</div>
-								<p>微信支付</p>
-							</div>
-							<div class="pay">
-								<div>
-									<img src="<%=ctxPath%>/images/payjpg.jpg" class="pay_img" />
-								</div>
-								<p>支付宝</p>
-							</div>
-						</ul></li>
-
-					<!-- <div class="dropdown">
-						<li><a style="color: #fff;" href="">捐助我们</a></li>
-						<div class="dropdown-content">
-							<div class="pay">
-								<div>
-									<img src="lyqlogo.jpg" class="pay_img" />
-								</div>
-								<p>微信支付</p>
-							</div>
-							<div class="pay">
-								<div>
-									<img src="lyqlogo.jpg" class="pay_img" />
-								</div>
-								<p>支付宝</p>
-							</div>
-						</div>
-					</div> -->
-
-
-					<li><a style="color: #fff;" href="">登录</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="top">
-		<div class="col-md-6 col-md-offset-2">
-
-			<div class="form-group">
-				<div class="col-lg-11 col-xs-10" style="padding: 0;">
-
-					<input type="text" id="input" name="text" value="<%=searchValue%>"
-						placeholder="你想要的?" class="form-control"
-						onkeypress="EnterPress(event,value)"
-						onkeydown="EnterPress(event,value)" style="border-radius: 0px;" />
+<%@include file="/WEB-INF/jsp/nav.jsp"%>
+		<div class="top">
+			<div class="col-md-6 col-md-offset-2">
+				<div class="form-group">
+					<div class="col-lg-11 col-xs-10" style="padding-left: 0px;">
+						<input type="text" id="input" name="text"   value="<%=searchValue%>"
+						 placeholder="你想要的? " class="form-control" onkeypress="EnterPress(event,value)" onkeydown="EnterPress(event,value)">
+					</div>
+					<button type="submit" class="btn btn-info col-lg-1 col-xs-2" onclick="ruSearch()">搜索</button>
 				</div>
-				<button type="submit" class="btn btn-primary col-lg-1 col-xs-2"
-					onclick="ruSearch()" style="border-radius: 0px;">搜索</button>
-			</div>
-
-			<div class="search_keyword">
+					<div class="search_keyword">
 				<p class="text-muted">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;热搜关键词:
 					<c:forEach items="${lsh}" var="hot">
@@ -123,8 +52,8 @@
 				</p>
 			</div>
 			<br />
-		</div>
-		<div class="col-md-8 col-md-offset-2">
+</div>
+				<div class="col-md-8 col-md-offset-2">
 			<ul class="nav nav-tabs col-md-12" role="tablist" id="feature-tab">
 				<li class="active"><a href="javascript:void(0)" role="tab"
 					onclick="ruSearch()" data-toggle="tab">全站</a></li>
@@ -162,8 +91,9 @@
 								
 								<br />
 							</c:forEach>
-							<!-- 							分页代码 -->
-							<c:if test="${msg.message==null}">
+
+								<!-- 							分页代码 -->
+								<c:if test="${msg.message==null}">
 								<c:if test='${msg.itemsList!=null}'>
 									<ul class="pagination">
 										<li onclick="gotoA(1)"><a href="#">首页</a></li>
@@ -192,13 +122,38 @@
 								</c:if>
 							</c:if>
 
+							</div>
 						</div>
 					</div>
-
 				</div>
-
+				<!--
+                	作者：1162091199@qq.com
+                	时间：2018-08-17
+                	描述：
+                -->
+				<div class="col-md-3">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>排名</th>
+								<th>搜索指数</th>
+							</tr>
+						</thead>
+						<tbody>
+						<c:forEach items="${rank}" var="item">
+							<tr>
+								<td>
+									<!--<span class="">1</span>  -->
+									<a target="_blank" title="" href="./search.do?text=${item.text}">${item.text}</a>
+								</td>
+								<td class="">${item.sum*10}<i class="glyphicon glyphicon-upload"></i></td>
+							</tr>
+						</c:forEach>
+						</tbody>
+					</table>
+				</div>
 			</div>
-			<c:if test="${msg.itemsList!=null}">
-			</c:if>
+			
+		</div>
 </body>
 </html>

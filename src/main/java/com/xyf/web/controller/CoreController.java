@@ -31,7 +31,9 @@ public class CoreController {
 	public ModelAndView index() {
 		ModelAndView modelAndView = new ModelAndView("index");
 		List<HotKeys> lsh=RedisUtils.getHotKeyList();//获取热搜字段
+		List<HotKeys> rank=RedisUtils.getHotRank();//获取排行
 		modelAndView.addObject("lsh",lsh);
+		modelAndView.addObject("rank",rank);
 		return modelAndView;
 	}
 	@RequestMapping(value = "/search.do", method = RequestMethod.GET)
@@ -41,11 +43,12 @@ public class CoreController {
 		}
 		RecordUtils.record(req, text);
 		List<HotKeys> lsh=RedisUtils.getHotKeyList();//获取热搜字段
+		List<HotKeys> rank=RedisUtils.getHotRank();//获取排行
 		ModelAndView modelAndView = new ModelAndView("index");
 		Map<String, Object> msg=restService.search(text, 1, "moviesdb");
 		modelAndView.addObject("msg",msg);
 		modelAndView.addObject("lsh",lsh);
-
+		modelAndView.addObject("rank",rank);
 		return modelAndView;
 	}
 	@RequestMapping(value = "/pageSearch.do", method = RequestMethod.GET)
@@ -56,11 +59,13 @@ public class CoreController {
 		}
 		RecordUtils.record(req, text);
 		List<HotKeys> lsh=RedisUtils.getHotKeyList();//获取热搜字段
+		List<HotKeys> rank=RedisUtils.getHotRank();//获取排行
 		ModelAndView modelAndView = new ModelAndView("index");
 		int current=cur.intValue();
 		Map<String, Object> msg=restService.search(text, current, "moviesdb");
 		modelAndView.addObject("msg",msg);
 		modelAndView.addObject("lsh",lsh);
+		modelAndView.addObject("rank",rank);
 		return modelAndView;
 	}
 	/**
@@ -118,6 +123,17 @@ public class CoreController {
 	public ModelAndView setHotKey() {
 		ModelAndView modelAndView = new ModelAndView("success");
 		RedisUtils.setHotKeyList();//设置热搜  
+		RedisUtils.setHotRank();//设置排行榜
+		//设置热度排行榜
 		return modelAndView;
 	}
+	
+	
+	@RequestMapping("/test.do")
+	public ModelAndView test() {
+		ModelAndView modelAndView = new ModelAndView("test2");
+		return modelAndView;
+	}
+	
+	
 }

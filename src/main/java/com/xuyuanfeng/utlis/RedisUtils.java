@@ -23,9 +23,8 @@ import redis.clients.jedis.JedisPoolConfig;
  * @author 2016wlw2 徐塬峰 创建时间：2018年7月20日 下午2:37:57
  */
 public class RedisUtils {
-	
-	private static final Logger logger = LogManager.getLogger(
-			RedisUtils.class);
+
+	private static final Logger logger = LogManager.getLogger(RedisUtils.class);
 	/**
 	 * 从配置文件中获得redis 的信息 并且创建jedis实例 操作redis服务器
 	 * 
@@ -38,11 +37,12 @@ public class RedisUtils {
 			config.setMaxIdle(10);// 最大的空闲连接
 			config.setMaxWaitMillis(1000);// 获取连接最大的等待时间
 			config.setTestOnBorrow(true);// 获取连接检查是否有效
-			jedisPool = new JedisPool(config, "localhost",6379,1000,"xuyuanfeng");//ConfigInfo.redis_password 
+			jedisPool = new JedisPool(config, "localhost", 6379, 1000);// ConfigInfo.redis_password
 		} catch (Exception e) {
 			logger.warn(e);
 		}
 	}
+
 	/**
 	 * 获得jedis对象
 	 */
@@ -81,33 +81,55 @@ public class RedisUtils {
 	 * 该方法从数据库中读取出热门搜索 6个 并且 将这些热门搜索 存放到redis中 以json字符串的方式
 	 */
 	public static void setHotKeyList() {
-		Gson gson =new Gson();
+		Gson gson = new Gson();
 		Jedis jedis = null;
 		jedis = jedisPool.getResource();
 		HotKeysDao hst = new HotKeysDao();
 		List<HotKeys> ls = hst.getHotKey();
-	    jedis.set("xuanfengHotSearchKeyList", gson.toJson(ls));
+		jedis.set("xuanfengHotSearchKeyList", gson.toJson(ls));
 		jedis.close();// 释放jedis
 	}
-	
+
 	public static List<HotKeys> getHotKeyList() {
-		Gson gson =new Gson();
+		Gson gson = new Gson();
 		Jedis jedis = null;
 		jedis = jedisPool.getResource();
-	    String value=jedis.get("xuanfengHotSearchKeyList");
-	    JsonParser parser = new JsonParser();
-	    JsonArray Jarray = parser.parse(value).getAsJsonArray();
-	    ArrayList<HotKeys> lcs = new ArrayList<HotKeys>();
-	    for(JsonElement obj : Jarray ){
-	    	HotKeys cse = gson.fromJson( obj , HotKeys.class);
-	        lcs.add(cse);  
-	    }
-	    jedis.close();// 释放jedis
-	    return lcs;
+		String value = jedis.get("xuanfengHotSearchKeyList");
+		JsonParser parser = new JsonParser();
+		JsonArray Jarray = parser.parse(value).getAsJsonArray();
+		ArrayList<HotKeys> lcs = new ArrayList<HotKeys>();
+		for (JsonElement obj : Jarray) {
+			HotKeys cse = gson.fromJson(obj, HotKeys.class);
+			lcs.add(cse);
+		}
+		jedis.close();// 释放jedis
+		return lcs;
 	}
-	
 
-	
-	
-	
+	public static void setHotRank() {
+		Gson gson = new Gson();
+		Jedis jedis = null;
+		jedis = jedisPool.getResource();
+		HotKeysDao hst = new HotKeysDao();
+		List<HotKeys> ls = hst.getHotRank();
+		jedis.set("xuanfengHotRank", gson.toJson(ls));
+		jedis.close();// 释放jedis
+	}
+
+	public static List<HotKeys> getHotRank() {
+		Gson gson = new Gson();
+		Jedis jedis = null;
+		jedis = jedisPool.getResource();
+		String value = jedis.get("xuanfengHotRank");
+		JsonParser parser = new JsonParser();
+		JsonArray Jarray = parser.parse(value).getAsJsonArray();
+		ArrayList<HotKeys> lcs = new ArrayList<HotKeys>();
+		for (JsonElement obj : Jarray) {
+			HotKeys cse = gson.fromJson(obj, HotKeys.class);
+			lcs.add(cse);
+		}
+		jedis.close();// 释放jedis
+		return lcs;
+	}
+
 }
