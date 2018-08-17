@@ -11,3 +11,5 @@
 
 <br/>
 <b>网站地址 http://www.lotcloudy.com/</b>
+
+<b>爬虫脚本py https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<b/>
