@@ -13,7 +13,6 @@
 	type="text/javascript" charset="utf-8"></script>
 <link rel="stylesheet" type="text/css"
 	href="<%=ctxPath%>/bootstrap/css/bootstrap.css" />
-<link href="<%=ctxPath%>/css/style.css" rel="stylesheet">
 <script type="text/javascript">
 
 $(document).ready(function(){

@@ -202,47 +202,34 @@
 													</tr>
 												</tbody>
 												<tbody id="MovieResources">
-													<tr>
-													<td class="MovieResources__td_name___6sZLk"><span></span>
-														<!-- react-text: 185 -->${movie.title} <!-- /react-text --></td>
-													<td class="MovieResources__td_download___1h3hy">
-														<ul class="MovieResources__self_resouces_icon___17W30">
-															<li class="MovieResources__ci_icon___1J-At"><a
-																target="_blank"
-																href="${movie.download_url}"><i
-																	class="iconfont icon-xiazai"></i> <!-- react-text: 191 -->磁链
-																	<!-- /react-text --> </a></li>
-														</ul>
-													</td>
-													<td>4GB</td>
-													<td>未知</td>
-													<td class="MovieResources__td_subtitle___2XU3H">超清|高清</td>
-													<td>${move.year }</td>
-												</tr>
-												<tr>
-													<td class="MovieResources__td_name___6sZLk"><span></span>
-														<!-- react-text: 185 -->${movie.title} <!-- /react-text --></td>
-													<td class="MovieResources__td_download___1h3hy">
-														<ul class="MovieResources__self_resouces_icon___17W30">
-															<li class="MovieResources__ci_icon___1J-At"><a
-																target="_blank"
-																href="${movie.download_url}"><i
-																	class="iconfont icon-xiazai"></i> <!-- react-text: 191 -->磁链
-																	<!-- /react-text --> </a></li>
-														</ul>
-													</td>
-													<td>4GB</td>
-													<td>未知</td>
-													<td class="MovieResources__td_subtitle___2XU3H">超清|高清</td>
-													<td>${move.year }</td>
-												</tr>
-												</tbody>
-											</table>
-											<div class="MovieResources__show_more hidden">展示更多结果</div>
+														<tr>
+															<td class="MovieResources__td_name"><span>
+																<!-- react-text: 185 -->死侍2 Deadpool 2(2018)</span>
+																<!-- /react-text -->
+															</td>
+															<td class="MovieResources__td_download">
+																<ul class="MovieResources__self_resouces_icon">
+																	<li class="MovieResources__ci_icon">
+																		<a target="_blank" href="magnet:?xt=urn:btih:9272fcd848fdc3f1918bcaecaee97d8fb38ae3fd"><i class="iconfont icon-xiazai"></i>
+																			<!-- react-text: 191 -->磁链
+																			<!-- /react-text -->
+																		</a>
+																	</li>
+																</ul>
+															</td>
+															<td>4GB</td>
+															<td>未知</td>
+															<td class="MovieResources__td_subtitle">未知</td>
+															<td>未知</td>
+														</tr>
+													</tbody>
+												</table>
+												<div class="MovieResources__show_more hidden">展示更多结果</div>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
+
 							<footer>免责声明<br>
 							<span>
 								本网站所收集的部分公开资料来源于互联网，转载的目的在于传递更多信息及用于网络分享，并不代表本站赞同其观点和对其真实性负责，也不构成任何其他建议。本站部分作品是由网友自主投稿和发布、编辑整理上传，对此类作品本站仅提供交流平台，不为其版权负责。如果您发现网站上有侵犯您的知识产权的作品，请与我们取得联系，我们会及时修改或删除。
