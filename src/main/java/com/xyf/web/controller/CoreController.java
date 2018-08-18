@@ -73,13 +73,15 @@ public class CoreController {
 	/**
 	 * ok 创建所有索引 删除整个库 管理
 	 */
+	/*
 	@RequestMapping("/deleteAll.do")
 	public ModelAndView deleteAll() {
 
 		restService.deleteIndex("xuanfengsearch");
 		ModelAndView modelAndView = new ModelAndView("Success");
 		return modelAndView;
-	}
+	}*
+	/
 	/**
 	 * 创建
 	 */
