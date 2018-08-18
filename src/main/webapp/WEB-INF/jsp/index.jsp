@@ -64,25 +64,13 @@
 						<div id="divChat">
 							<span>${msg.took}</span> <span>${msg.message}</span>
 							<c:forEach items="${msg.itemsList}" var="item">
-
 								<h4>
 									<u> <p><a href="<%=ctxPath%>/get.do?id=${item.id}">
 										${item.title}&nbsp;&nbsp;
 										</a> 
-											<c:if test="${item.download_url!=null}">
-												<a href="${item.download_url}" target="_blank">
-													<button class="label label-success">点击下载</button>
-												</a>
-											</c:if> 
-											<c:if test="${item.download_url==null}">
-												<a href="${item.download_url}" target="_blank">
-													<button class="label label-error">暂未上线</button>
-												</a>
-											</c:if>
 										</p>
 									</u>
 								</h4>
-								
 									<p>
 										<a href=""><img class="img-thumbnail img-responsive" style="width: 160px;height:200px;display: block;"
 											src="${item.img_url}"/> </a>
@@ -146,7 +134,7 @@
 									<!--<span class="">1</span>  -->
 									${ status.index + 1}<a target="_blank" title="" href="./search.do?text=${item.text}">${item.text}</a>
 								</td>
-								<td class="">${item.sum*7}<i class="glyphicon glyphicon-upload"></i></td>
+								<td class="">${item.sum*5}<i class="glyphicon glyphicon-upload"></i></td>
 							</tr>
 						</c:forEach>
 						</tbody>

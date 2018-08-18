@@ -202,15 +202,16 @@
 													</tr>
 												</tbody>
 												<tbody id="MovieResources">
+														<c:if test="${movie.download_url!=null}">
 														<tr>
 															<td class="MovieResources__td_name"><span>
-																<!-- react-text: 185 -->死侍2 Deadpool 2(2018)</span>
+																<!-- react-text: 185 -->${movie.title}</span>
 																<!-- /react-text -->
 															</td>
 															<td class="MovieResources__td_download">
 																<ul class="MovieResources__self_resouces_icon">
 																	<li class="MovieResources__ci_icon">
-																		<a target="_blank" href="magnet:?xt=urn:btih:9272fcd848fdc3f1918bcaecaee97d8fb38ae3fd"><i class="iconfont icon-xiazai"></i>
+																		<a target="_blank" href="${movie.download_url}"><i class="iconfont icon-xiazai"></i>
 																			<!-- react-text: 191 -->磁链
 																			<!-- /react-text -->
 																		</a>
@@ -222,6 +223,32 @@
 															<td class="MovieResources__td_subtitle">未知</td>
 															<td>未知</td>
 														</tr>
+														</c:if>
+														<c:forEach items="${lsm}" var="item"    varStatus="status">
+															<tr>
+															<td class="MovieResources__td_name"><span>
+																<!-- react-text: 185 -->${movie.title}</span>
+																<!-- /react-text -->
+															</td>
+															<td class="MovieResources__td_download">
+																<ul class="MovieResources__self_resouces_icon">
+																	<li class="MovieResources__ci_icon">
+																		<a target="_blank" href="${item.downloadUrl}"><i class="iconfont icon-xiazai"></i>
+																			<!-- react-text: 191 -->磁链${ status.index + 1}
+																			<!-- /react-text -->
+																		</a>
+																	</li>
+																</ul>
+															</td>
+															<td>${item.size}</td>
+															<td>${item.clear}</td>
+															<td class="MovieResources__td_subtitle">未知</td>
+															<td>${item.createTime}</td>
+														</tr>
+														</c:forEach>
+														
+														
+														
 													</tbody>
 												</table>
 												<div class="MovieResources__show_more hidden">展示更多结果</div>

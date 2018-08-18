@@ -67,7 +67,7 @@ public class HotKeysDao {
 		ResultSet rs = null;
 		try {
 			rs = JDBCUtils.executeQuery(" select id,text,sum(c) as sum  from ( select id,ip,text,count(ip) c from" 
-      +" t_searchkey where createtime>=DATE_SUB(NOW(),INTERVAL 5 DAY)"
+      +" t_searchkey where createtime>=DATE_SUB(NOW(),INTERVAL 1 DAY)"
       + " GROUP BY ip,text  ORDER BY ip DESC )t"
       + " GROUP BY t.text order by SUM(c) desc limit 0,10");
 			List<HotKeys> ls = new ArrayList<HotKeys>();

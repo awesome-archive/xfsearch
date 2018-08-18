@@ -15,8 +15,10 @@ import com.xuyuanfeng.utlis.CommonUtils;
 import com.xuyuanfeng.utlis.DownloadImage;
 import com.xuyuanfeng.utlis.RecordUtils;
 import com.xuyuanfeng.utlis.RedisUtils;
+import com.xyf.dao.MagnetDao;
 import com.xyf.dao.MovieDao;
 import com.xyf.pojo.HotKeys;
+import com.xyf.pojo.Magnet;
 import com.xyf.pojo.Movies;
 import com.xyf.service.ElasticSearchRestFullService;
 
@@ -112,6 +114,10 @@ public class CoreController {
         if (m==null) {
 			return new ModelAndView("500");
 		}
+        MagnetDao mgd=new MagnetDao();
+        List<Magnet> lsm=mgd.getAll(id);
+        
+        modelAndView.addObject("lsm",lsm);      
         modelAndView.addObject("movie",m);      
 		return modelAndView;
 	}
