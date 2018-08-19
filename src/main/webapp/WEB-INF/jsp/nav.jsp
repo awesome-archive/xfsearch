@@ -4,9 +4,6 @@
 		<br/>
 		<br/>
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
-			<div class="col-md-2 logo">
-			<a href="./" class="">	<img src="./images/5_White_logo_on_black_293x67.png"></a>		
-			</div>
 			<div class="container col-md-offset-2">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

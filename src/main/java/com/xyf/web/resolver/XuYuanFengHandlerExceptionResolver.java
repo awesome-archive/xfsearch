@@ -9,8 +9,8 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
 @Component
-public class RupengHandlerExceptionResolver implements HandlerExceptionResolver {
-	private static final Logger logger = LogManager.getLogger(RupengHandlerExceptionResolver.class);
+public class XuYuanFengHandlerExceptionResolver implements HandlerExceptionResolver {
+	private static final Logger logger = LogManager.getLogger(XuYuanFengHandlerExceptionResolver.class);
 
 	// 错误配置
 	@Override

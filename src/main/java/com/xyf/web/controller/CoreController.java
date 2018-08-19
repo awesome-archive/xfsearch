@@ -139,7 +139,7 @@ public class CoreController {
 	
 	@RequestMapping("/test.do")
 	public ModelAndView test() {
-		ModelAndView modelAndView = new ModelAndView("test2");
+		ModelAndView modelAndView = new ModelAndView("test");
 		return modelAndView;
 	}
 	

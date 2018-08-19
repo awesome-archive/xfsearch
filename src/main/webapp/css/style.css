@@ -31,12 +31,13 @@
 		width: 300px;
 	}
 	
-	.about-menu p img{
+	.about-menu p img {
 		width: 200px;
 		height: 200px;
 		margin: 10px 50px;
 	}
-	.about-introduce{
+	
+	.about-introduce {
 		text-indent: 2em;
 		margin: 0 10px;
 	}
@@ -100,6 +101,11 @@
 		height: 200px;
 	}
 	
+	.logo img{
+		float: right;
+		height: 50px;
+	}
+	
 	.navbar-inverse .navbar-nav>li>a {
 		color: #fff;
 	}
@@ -110,12 +116,15 @@
 		background-color: #FBFBF9;
 	}
 	
-	.glyphicon-download{
+	.glyphicon-download {
 		color: #41ad42;
 	}
-	.glyphicon-upload{
+	
+	.glyphicon-upload {
 		color: #f23f40;
 	}
+	
+	
 	/*针对通常小屏幕*/
 	
 	@media (max-width: 768px) {
@@ -124,6 +133,18 @@
 		}
 		.img-media {
 			width: 330px;
+		}
+		footer {
+			text-align: center;
+			padding: 40px 0;
+			background-color: #FBFBF9;
+			display: none;
+		}
+		.ranking{
+			display: none;
+		}
+		.logo{
+			display: none;
 		}
 	}
 	/*针对平板，768以上的*/
