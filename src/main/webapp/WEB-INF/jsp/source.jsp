@@ -116,9 +116,8 @@
 										</dl>
 										<div class="clearfix"></div>
 									</div>
-									<div class="BaikeCommon__summary">简介:：${movie.introduce}
-										&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;无限战争。嘴炮和贱比上一部有所收敛，但是故事上比上一部要强很多
-										老爷傻赞，冬兵灭霸，终结者2，冰雪奇缘，情到深处，007式片头，最强客串皮特……一如既往吐槽力Max。但吐槽之后又是浓浓深情，丧妻之痛、爱子之心，又爆笑又虐心，原来嘴炮是他的脆弱，耍贱是他的伪装，这么一群恶棍、坏蛋、怪物原来都是如此渴望温暖与爱，这一点上死侍2简直是边缘人的颂歌。
+									<div class="BaikeCommon__summary">
+									简介:：${movie.introduce}
 									</div>
 								</div>
 								<div class="BaikeCommon__summary_side">

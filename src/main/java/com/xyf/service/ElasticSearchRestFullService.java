@@ -126,7 +126,7 @@ public class ElasticSearchRestFullService {
 			if (startSize > result.getHits().getTotal() || result.getHits().getTotal() == 0) // 如果当前页面的起点大于了数据的总条数或者当前页的总条数为0
 			{
 				msgMap.put("message",
-						"<br/><br/><font size='5' color='#ff7300'>没有找到    </ofont><font size='3' colr='#999'>关于“" + HTMLUtils.htmlescape(text)
+						"<br/><br/><font size='5' color='#ff7300'>没有找到    </font><font size='3' colr='#999'>关于“" + HTMLUtils.htmlescape(text)
 								+ "”的内容</font>");
 				return msgMap;
 			}
