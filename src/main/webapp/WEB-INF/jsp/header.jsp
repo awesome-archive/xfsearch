@@ -3,7 +3,7 @@
 <%
 	String ctxPath = request.getContextPath();
 %>
-
+<meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="icon" href="/images/" type="image/x-icon">
@@ -12,9 +12,17 @@
 	type="text/javascript" charset="utf-8"></script>
 <script src="<%=ctxPath%>/bootstrap/js/bootstrap.js"
 	type="text/javascript" charset="utf-8"></script>
+		<link rel="Shortcut Icon" href="<%=ctxPath%>/images/logo-icon.ico">
+		<link rel="stylesheet" href="<%=ctxPath%>/css/error.css" />
+
+<link rel="icon" href="/images/" type="image/x-icon">
 <link rel="stylesheet" type="text/css"
 	href="<%=ctxPath%>/bootstrap/css/bootstrap.css" />
 <link rel="Shortcut Icon" href="<%=ctxPath%>/images/logo-icon.ico">
+
+
+
+
 <script type="text/javascript">
 
 $(document).ready(function(){

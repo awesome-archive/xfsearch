@@ -4,10 +4,37 @@
 <html>
     <head>
         <title>无法找到资源。</title>
-        <meta name="viewport" content="width=device-width" />
+        <%@include file="/WEB-INF/jsp/header.jsp"%>
     </head>
 
-    <body bgcolor="white">
-        <p>500  服务器错误</p>
-    </body>
+   <body>
+		<div class="error-page">
+			<div class="error-page-container">
+				<div class="error-page-main">
+					<h3>
+		                <strong>500</strong>服务器异常
+		            </h3>
+					<div class="error-page-actions">
+						<div>
+							<h4>可能原因：</h4>
+							<ol>
+								<li>网络信号差</li>
+								<li>服务器受到攻击</li>
+								<li>太多用户同时访问</li>
+							</ol>
+						</div>
+						<div>
+							<h4>可以尝试：</h4>
+							<ul>
+								<li>
+									<a href="./">返回首页</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
 </html>
