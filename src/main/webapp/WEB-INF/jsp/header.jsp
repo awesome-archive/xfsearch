@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="icon" href="/images/" type="image/x-icon">
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="<%=ctxPath%>/bootstrap/js/jquery-3.2.0.min.js"
 	type="text/javascript" charset="utf-8"></script>
 <script src="<%=ctxPath%>/bootstrap/js/bootstrap.js"

@@ -81,7 +81,7 @@
 													class="BaikeCommon__basic_info_name BaikeCommon__basic_info_item">原&nbsp;&nbsp;&nbsp;名</dt>
 												<dd
 													class="BaikeCommon__basic_info_value BaikeCommon__basic_info_item">
-													href="./search.do?text=${movie.title}">${movie.title}</a>
+												<a 	href="./search.do?text=${movie.title}">${movie.title}</a>
 												</dd>
 											</div>
 											<div>

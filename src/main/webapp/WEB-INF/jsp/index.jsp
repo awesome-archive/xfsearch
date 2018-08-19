@@ -134,7 +134,7 @@
 									<!--<span class="">1</span>  -->
 									${ status.index + 1}<a target="_blank" title="" href="./search.do?text=${item.text}">${item.text}</a>
 								</td>
-								<td class="">${item.sum*5}<i class="glyphicon glyphicon-upload"></i></td>
+								<td class="">${item.sum*7}<i class="glyphicon glyphicon-upload"></i></td>
 							</tr>
 						</c:forEach>
 						</tbody>
