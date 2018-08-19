@@ -13,6 +13,8 @@ public class Movies {
 	private String download_url;// 下载地址
 	private String img_url;// 图片下载地址
 	private String local_img_url;//图片本地路径
+	private String length;//片长
+	private String director;//导演
 	
 	
 	
@@ -20,7 +22,22 @@ public class Movies {
 	
 	
 	
-	
+	public String getLength() {
+		return length;
+	}
+
+	public void setLength(String length) {
+		this.length = length;
+	}
+
+	public String getDirector() {
+		return director;
+	}
+
+	public void setDirector(String director) {
+		this.director = director;
+	}
+
 	public String getLocal_img_url() {
 		return local_img_url;
 	}

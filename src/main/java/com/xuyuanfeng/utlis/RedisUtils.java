@@ -37,7 +37,7 @@ public class RedisUtils {
 			config.setMaxIdle(10);// 最大的空闲连接
 			config.setMaxWaitMillis(1000);// 获取连接最大的等待时间
 			config.setTestOnBorrow(true);// 获取连接检查是否有效
-			jedisPool = new JedisPool(config, "localhost", 6379, 1000,"xuyuanfeng");// ConfigInfo.redis_password
+			jedisPool = new JedisPool(config, "localhost", 6379, 1000);// ConfigInfo.redis_password
 		} catch (Exception e) {
 			logger.warn(e);
 		}
