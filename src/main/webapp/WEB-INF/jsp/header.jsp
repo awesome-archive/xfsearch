@@ -26,7 +26,32 @@ $(document).ready(function(){
         $(this).click();    
     });
   })
-  
+  function send(id,idName) {
+	//ajax请求
+			$.ajax({
+				type : 'GET',
+				dataType : "json",
+				url : "./setPriase.do?id="+id,
+				success : function(result) {
+
+		if (result.status == "success") {
+         
+			//alert(result.data);
+			document.getElementById(idName).innerHTML =result.data;
+			alert(result.data);
+			
+			
+		
+		}
+		if (result.status == "error") {
+			alert(result.data);
+		}
+		
+		
+				}
+	});
+	return false;
+}
 	function btnType(type) 
 	{
 		var text = document.getElementById("input").value;

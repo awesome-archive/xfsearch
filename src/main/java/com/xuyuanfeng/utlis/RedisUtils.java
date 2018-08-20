@@ -131,5 +131,18 @@ public class RedisUtils {
 		jedis.close();// 释放jedis
 		return lcs;
 	}
+	//计数器的实现
+	//redis获得赞的数量
+	public static void setPriase(String download_url_id)
+	{
+		Jedis jedis = jedisPool.getResource();
+		jedis.incr(download_url_id);
+		jedis.close();
+	}
+
+	
+	
+	
+	
 
 }

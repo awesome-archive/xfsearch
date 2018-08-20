@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.xuyuanfeng.utlis.AjaxResult;
 import com.xuyuanfeng.utlis.CommonUtils;
 import com.xuyuanfeng.utlis.DownloadImage;
 import com.xuyuanfeng.utlis.RecordUtils;
@@ -118,6 +120,7 @@ public class CoreController {
 		}
         MagnetDao mgd=new MagnetDao();
         List<Magnet> lsm=mgd.getAll(id);
+        //獲取當前磁力鏈接所有的id
         
         modelAndView.addObject("lsm",lsm);      
         modelAndView.addObject("movie",m);      
@@ -135,7 +138,17 @@ public class CoreController {
 		//设置热度排行榜
 		return modelAndView;
 	}
+	@RequestMapping("/setPriase.do")
+	public @ResponseBody AjaxResult setPriase(String id) {
+		
+		RedisUtils.setPriase(id);
+		String count=RedisUtils.getValue(id);
+
+		//設置完成之後需要更新字段
+		return AjaxResult.successInstance(count);
+
 	
+	}
 	
 	@RequestMapping("/test.do")
 	public ModelAndView test() {

@@ -9,9 +9,9 @@ public class Magnet {
     private String downloadUrl;
     private String size;
     private String clear;
+    private String praise;
     private Date createTime;
     private Boolean isDeleted;
-    
     
 	public Long getId() {
 		return id;
@@ -55,6 +55,13 @@ public class Magnet {
 	public void setIsDeleted(Boolean isDeleted) {
 		this.isDeleted = isDeleted;
 	}
+	public String getPraise() {
+		return praise;
+	}
+	public void setPraise(String praise) {
+		this.praise = praise;
+	}
+
     
     
 	

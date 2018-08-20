@@ -195,6 +195,7 @@
 														<td class="MovieResources__td_name">名字</td>
 														<td class="MovieResources__td_download">资源下载</td>
 														<td class="MovieResources__td_size">大小</td>
+														<td class="MovieResources__td_likes">赞</td>
 														<td class="MovieResources__td_resolution">清晰度</td>
 														<td class="MovieResources__td_subtitle">字幕</td>
 														<td class="MovieResources__td_time">发布时间</td>
@@ -218,7 +219,7 @@
 																</ul>
 															</td>
 															<td>4GB</td>
-															<td>未知</td>
+															<td></td>
 															<td class="MovieResources__td_subtitle">未知</td>
 															<td>未知</td>
 														</tr>
@@ -240,6 +241,7 @@
 																</ul>
 															</td>
 															<td>${item.size}</td>
+															<td ><a href="javascript:void(0)" onclick="send('${item.id}','praise${ status.index + 1}')" id="praise${ status.index + 1}">${item.praise} <!--{{likes}}--></a><i class="glyphicon 	glyphicon-thumbs-up"></i></td>
 															<td>${item.clear}</td>
 															<td class="MovieResources__td_subtitle">未知</td>
 															<td>${item.createTime}</td>

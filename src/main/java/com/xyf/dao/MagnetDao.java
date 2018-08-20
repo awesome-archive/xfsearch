@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.xuyuanfeng.utlis.JDBCUtils;
+import com.xuyuanfeng.utlis.RedisUtils;
 import com.xyf.pojo.Magnet;
 
 public class MagnetDao {
@@ -29,8 +30,10 @@ public class MagnetDao {
             	mag.setDownloadUrl(rs.getString("downloadUrl"));
             	mag.setSize(rs.getString("size"));
             	mag.setIsDeleted(rs.getBoolean("isDeleted"));
+            	mag.setPraise(RedisUtils.getValue(String.valueOf(mag.getId())));
             	lsMag.add(mag);
             }
+            
             return   lsMag;
 		}
 		catch (SQLException e) {
