@@ -16,4 +16,4 @@
 <b>爬虫脚本py https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<b/>
 
 <br/><br/>
-
+<p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~</p>
