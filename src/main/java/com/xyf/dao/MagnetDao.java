@@ -30,7 +30,14 @@ public class MagnetDao {
             	mag.setDownloadUrl(rs.getString("downloadUrl"));
             	mag.setSize(rs.getString("size"));
             	mag.setIsDeleted(rs.getBoolean("isDeleted"));
+            	if(RedisUtils.getValue(String.valueOf(mag.getId()))!=null)
+            	{
             	mag.setPraise(RedisUtils.getValue(String.valueOf(mag.getId())));
+            	}
+            	else
+            	{
+            	mag.setPraise("0");
+            	}
             	lsMag.add(mag);
             }
             

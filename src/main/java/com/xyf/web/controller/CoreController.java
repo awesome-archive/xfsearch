@@ -143,7 +143,6 @@ public class CoreController {
 		
 		RedisUtils.setPriase(id);
 		String count=RedisUtils.getValue(id);
-
 		//設置完成之後需要更新字段
 		return AjaxResult.successInstance(count);
 

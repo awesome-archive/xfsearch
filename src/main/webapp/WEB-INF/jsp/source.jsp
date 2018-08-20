@@ -241,7 +241,7 @@
 																</ul>
 															</td>
 															<td>${item.size}</td>
-															<td ><a href="javascript:void(0)" onclick="send('${item.id}','praise${ status.index + 1}')" id="praise${ status.index + 1}">${item.praise} <!--{{likes}}--></a><i class="glyphicon 	glyphicon-thumbs-up"></i></td>
+															<td ><a href="javascript:void(0)" id="praise${ status.index + 1}"  onclick="send('${item.id}','praise${ status.index + 1}') ">${item.praise} <!--{{likes}}--></a><i class="glyphicon 	glyphicon-thumbs-up"></i></td>
 															<td>${item.clear}</td>
 															<td class="MovieResources__td_subtitle">未知</td>
 															<td>${item.createTime}</td>
