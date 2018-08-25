@@ -7,7 +7,6 @@
 
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="icon" href="/images/" type="image/x-icon">
 		<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 		<link rel="Shortcut Icon" href="<%=ctxPath%>/images/logo-icon.ico">

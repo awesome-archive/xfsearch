@@ -18,9 +18,11 @@ import com.xuyuanfeng.utlis.DownloadImage;
 import com.xuyuanfeng.utlis.RecordUtils;
 import com.xuyuanfeng.utlis.RedisUtils;
 import com.xyf.dao.MagnetDao;
+import com.xyf.dao.MessagesDao;
 import com.xyf.dao.MovieDao;
 import com.xyf.pojo.HotKeys;
 import com.xyf.pojo.Magnet;
+import com.xyf.pojo.Messages;
 import com.xyf.pojo.Movies;
 import com.xyf.service.ElasticSearchRestFullService;
 
@@ -145,15 +147,26 @@ public class CoreController {
 		String count=RedisUtils.getValue(id);
 		//設置完成之後需要更新字段
 		return AjaxResult.successInstance(count);
-
-	
 	}
 	
-	@RequestMapping("/test.do")
-	public ModelAndView test() {
-		ModelAndView modelAndView = new ModelAndView("test");
+	@RequestMapping("/user.do")
+	public ModelAndView user() {
+		ModelAndView modelAndView = new ModelAndView("user");
+		MessagesDao md=new MessagesDao();;
+		List<Messages> lm=md.getAll();
+		modelAndView.addObject("lm",lm);
 		return modelAndView;
 	}
-	
-	
+	@RequestMapping("/upMessage.do")
+	public @ResponseBody AjaxResult upMessage(HttpServletRequest req,String description) {
+		if(CommonUtils.isEmpty(description))
+		{
+			return AjaxResult.errorInstance("描述不能为空");
+		}
+		String ip=req.getRemoteAddr();
+		MessagesDao md=new MessagesDao();
+		md.insert(description, ip);
+		return new AjaxResult("200","ok");
+		
+	}
 }

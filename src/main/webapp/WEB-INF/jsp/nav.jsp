@@ -62,7 +62,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="">登录</a>
+							<a href="./user.do">个人页面</a>
 						</li>
 					</ul>
 				</div>
