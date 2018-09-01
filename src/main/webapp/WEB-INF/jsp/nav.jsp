@@ -62,6 +62,9 @@
 							</ul>
 						</li>
 						<li>
+							<a href="http://wpa.qq.com/msgrd?v=3&uin=986771570&site=qq&menu=yes">在线客服</a>
+						</li>
+						<li>
 							<a href="">登录</a>
 						</li>
 					</ul>
