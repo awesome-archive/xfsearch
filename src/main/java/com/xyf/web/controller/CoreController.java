@@ -147,7 +147,7 @@ public class CoreController {
 		//設置完成之後需要更新字段
 		return AjaxResult.successInstance(count);
 	}
-	
+	/*
 	@RequestMapping("/user.do")
 	public ModelAndView user() {
 		ModelAndView modelAndView = new ModelAndView("user");
@@ -166,6 +166,6 @@ public class CoreController {
 		MessagesDao md=new MessagesDao();
 		md.insert(description, ip);
 		return new AjaxResult("200","ok");
-		
 	}
+	*/
 }
