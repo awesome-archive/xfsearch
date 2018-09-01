@@ -62,10 +62,14 @@
 							</ul>
 						</li>
 						<li>
+<<<<<<< HEAD
 							<a href="http://wpa.qq.com/msgrd?v=3&uin=986771570&site=qq&menu=yes">在线客服</a>
 						</li>
 						<li>
 							<a href="">登录</a>
+=======
+							<a href="./user.do">个人页面</a>
+>>>>>>> 77db7b012b80d8e4bd53e52ae5c89e6c1afaf4d2
 						</li>
 					</ul>
 				</div>

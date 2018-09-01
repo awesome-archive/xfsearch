@@ -13,7 +13,7 @@
 <br/>
 <b>网站地址（已启用https://，没有小广告，没有域名劫持，一个干净的搜索系统） https://www.lotcloudy.com/</b><br/><br/>
 
-<b>爬虫脚本py https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<b/>
+<b>爬虫脚本py(授人以鱼不如授人以渔) https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<b/>
 
 <br/><br/>
-<p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~</p>
+<p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~!</p>
