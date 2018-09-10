@@ -18,7 +18,10 @@
 <br/><br/>
 <p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~!</p>
 
-<form class="starred js-social-form" action="/RAOE/xfsearch/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="JB9TdOsmx8WOASPbu4MlBQT8Xb1vukyvRMABEODk7l6GrcfrQk21V54t02jNB8r85zC7RAqZf6xE8v3qIL4PWA==">
+<li>
+    
+  <div class="js-toggler-container js-social-container starring-container on">
+    <!-- '"` --><!-- </textarea></xmp> --><form class="starred js-social-form" action="/RAOE/xfsearch/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="aPkncwrNFY0qAlm7cIap0QBOO7Bvx7/WJSoBCxqeUj/KS7Pso6ZnHzouqQgGAkYo44LdSQrkjNUlGP3x2sSzOQ==">
       <input type="hidden" name="context" value="repository">
       <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar RAOE/xfsearch" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
         <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
@@ -28,3 +31,15 @@
           143
         </a>
 </form>
+    <!-- '"` --><!-- </textarea></xmp> --><form class="unstarred js-social-form" action="/RAOE/xfsearch/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="Rc1lpuBBZDZ4wKAS9Yk9V+jJVc/w9RzFIXqGOPXx66/KJrJL+m2KIIQS+FIVsi1ezRbMAITS9l/YQ9CO5jtwNg==">
+      <input type="hidden" name="context" value="repository">
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Star this repository" title="Star RAOE/xfsearch" data-ga-click="Repository, click star button, action:blob#show; text:Star">
+        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/RAOE/xfsearch/stargazers" aria-label="143 users starred this repository">
+          143
+        </a>
+</form>  </div>
+
+  </li>
