@@ -147,6 +147,41 @@ public class CoreController {
 		//設置完成之後需要更新字段
 		return AjaxResult.successInstance(count);
 	}
+	
+	/**
+	 * 提供相关的api
+	 */
+	@RequestMapping(value = "/searchResultJson.do", method = RequestMethod.GET)
+	public @ResponseBody AjaxResult searchResultJson(String text,HttpServletRequest req) {
+		
+		RecordUtils.record(req, text);
+		ModelAndView modelAndView = new ModelAndView("index");
+		Map<String, Object> msg=restService.search(text, 1, "moviesdb");
+		modelAndView.addObject("msg",msg);
+		return AjaxResult.successInstance(msg);
+	}
+	/**
+	 * 带页码的
+	 * @param text
+	 * @param req
+	 * @param page
+	 * @return
+	 */
+	@RequestMapping(value = "/searchPageResultJson.do", method = RequestMethod.GET)
+	public @ResponseBody AjaxResult searchResultJson(String text,HttpServletRequest req,Long page) {
+		
+		RecordUtils.record(req, text);
+		ModelAndView modelAndView = new ModelAndView("index");
+		if(CommonUtils.isEmpty(page))
+		{
+          return new AjaxResult().errorInstance("页码错误");			
+ 		}
+		Map<String, Object> msg=restService.search(text, page.intValue(), "moviesdb");
+		modelAndView.addObject("msg",msg);
+		return AjaxResult.successInstance(msg);
+	}
+	
+	
 	/*
 	@RequestMapping("/user.do")
 	public ModelAndView user() {
