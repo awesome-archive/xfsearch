@@ -18,11 +18,11 @@
 
 =======
 <br/>
-<b>网站地址（已启用https://，没有小广告，没有域名劫持，一个干净的搜索系统）http://www.lotcloudy.com/search/</b><br/><br/>
+<b>网站地址（已启用https://，没有小广告，没有域名劫持，一个干净的搜索系统）http://www.lotcloudy.com/search/</p><br/><br/>
 
-<b>爬虫脚本python(授人以鱼不如授人以渔) https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<b/>
+<p>爬虫脚本python(授人以鱼不如授人以渔) https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<p/>
 
 <br/><br/>
 <p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~!</p>
 
->>>>>>> 66b3e24d42bffd0b4620119a73e9d698a2afe132
+
