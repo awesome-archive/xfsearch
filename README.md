@@ -20,8 +20,8 @@
 
 <h2>API文档<h2><br/>
 <p>返回json格式的字符数组</p><br/>
-<p>查询某一个电影范围 https://www.lotcloudy.com/searchResultJson.do?text=你要查询的电影</p><br/>
-<p>查询某一个电影范围 https://www.lotcloudy.com/searchPageResultJson.do?text=你要查询的电影&&page=2（页码）</p><br/>
+<p>例子:查询某一个电影范围 https://www.lotcloudy.com/searchResultJson.do?text=你要查询的电影</p><br/>
+<p>例子:查询某一个电影范围 https://www.lotcloudy.com/searchPageResultJson.do?text=你要查询的电影&&page=2</p><br/>
 
 
 <br/><br/>
