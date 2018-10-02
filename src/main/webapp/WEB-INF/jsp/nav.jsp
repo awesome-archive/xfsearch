@@ -58,6 +58,16 @@
 										<td>2.00元</td>
 										<td>支付宝支付</td>
 									</tr>
+										<tr>
+										<td>AB</td>
+										<td>5.00元</td>
+										<td>微信支付</td>
+									</tr>
+									<tr>
+										<td>鼻屎</td>
+										<td>2.00元</td>
+										<td>支付宝支付</td>
+									</tr>
 								</table>
 							</ul>
 						</li>
@@ -65,7 +75,7 @@
 							<a href="http://wpa.qq.com/msgrd?v=3&uin=986771570&site=qq&menu=yes">在线客服</a>
 						</li>
 						<li>
-							<a href="./user.do">用户中心</a>
+							<a href="./jforum-2.2.0/forums/list.page">用户中心</a>
 						</li>
 					</ul>
 				</div>
