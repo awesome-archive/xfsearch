@@ -16,13 +16,9 @@
 <p>返回json格式的字符数组</p><br/>
 <p>例子:查询某一个电影范围 https://www.lotcloudy.com/searchResultJson.do?text=你要查询的电影</p><br/>
 <p>例子:查询某一个电影范围 https://www.lotcloudy.com/searchPageResultJson.do?text=你要查询的电影&&page=2</p><br/>
-<p>返回数据格式</p>
-
-<img src="/image/data.jpg" alt="Ö÷Ò³" style="max-width:100%;"></br>
-                                                  
-<h2>新增论坛系统jforum搭建</h2>
 
 <br/><br/>
-<p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~~!</p>
+<p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~~!
+有相关的建议欢迎发送邮箱15008121886@163.com 给我留言</p>
 
 
