@@ -14,8 +14,9 @@
 <p>爬虫脚本python(授人以鱼不如授人以渔) https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<p/>
 <h2>API文档<h2><br/>
 <p>返回json格式的字符数组</p><br/>
-<p>例子:查询某一个电影范围 https://www.lotcloudy.com/searchResultJson.do?text=你要查询的电影</p><br/>
+<text>例子:查询某一个电影范围 https://www.lotcloudy.com/searchResultJson.do?text=你要查询的电影</text><br/>
 <p>例子:查询某一个电影范围 https://www.lotcloudy.com/searchPageResultJson.do?text=你要查询的电影&&page=2</p><br/>
+ <img src="/image/result.png" alt="Ö÷Ò³" style="max-width:100%;"></br>
 
 <br/><br/>
 <p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~~!
