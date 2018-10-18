@@ -117,6 +117,13 @@ public class ElasticSearchRestFullService {
 				p.setIntroduce(hit.get_source().getIntroduce());
 				p.setDownload_url(hit.get_source().getDownload_url());
 				p.setImg_url(hit.get_source().getImg_url());
+                
+				p.setDouban_link(hit.get_source().getDouban_link());
+                p.setYear(hit.get_source().getYear());
+                p.setCountry(hit.get_source().getCountry());
+                p.setLan(hit.get_source().getLan());
+                p.setMain_actor(hit.get_source().getMain_actor());
+                
 				int id=hit.get_source().getId();
 				Long pid=new Long(id);
 				p.setId(pid);
@@ -179,6 +186,18 @@ public class ElasticSearchRestFullService {
 				String title = JsoupUtils.getHtmlInnerText(rs.getString("title"));
 				title = HTMLUtils.delHTMLTag(title);
 				title = HTMLUtils.stripHtml(title);
+				//插入所有结果
+				String year =rs.getString("year");
+				String country=rs.getString("country");
+				String lan =rs.getString("lan");
+				String douban_linl=rs.getString("douban_link");
+				String main_actor=rs.getString("main_actor");
+				pl.setMain_actor(main_actor);
+				pl.setContry(country);
+				pl.setLan(lan);
+				pl.setDouban_link(douban_linl);
+				pl.setYear(year);
+				
 				pl.setDownload_url(rs.getString("download_url"));
 				if(CommonUtils.isEmail(rs.getString("download_url")))
 				{

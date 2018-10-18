@@ -11,21 +11,53 @@ package com.xuyuanfeng.elasticsearch.primary.dto.result;
  */
 public class _source {
 
-    private int id;
-    private String title;
-    private String body;
-    private String url;
-    private String download_url;
-    private String img_url;
-    private String introduce;
+    private int id; //id
+    private String title;//标题
+    private String body;//内容
+    private String url;//url
+    private String download_url;//下载地址
+    private String img_url;//图片地址
+    private String introduce;//介绍
+    private String year;//年份
+    private String lan; //首演
+    private String main_actor;//主演
+    private String country;//城市
+    private String douban_link;//豆瓣连接
     
     
     
+     
     
-    
-    
-    
-    
+	public String getYear() {
+		return year;
+	}
+	public void setYear(String year) {
+		this.year = year;
+	}
+	public String getLan() {
+		return lan;
+	}
+	public void setLan(String lan) {
+		this.lan = lan;
+	}
+	public String getMain_actor() {
+		return main_actor;
+	}
+	public void setMain_actor(String main_actor) {
+		this.main_actor = main_actor;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public String getDouban_link() {
+		return douban_link;
+	}
+	public void setDouban_link(String douban_link) {
+		this.douban_link = douban_link;
+	}
 	public String getDownload_url() {
 		return download_url;
 	}
