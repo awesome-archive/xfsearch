@@ -182,25 +182,4 @@ public class CoreController {
 	}
 	
 	
-	/*
-	@RequestMapping("/user.do")
-	public ModelAndView user() {
-		ModelAndView modelAndView = new ModelAndView("user");
-		MessagesDao md=new MessagesDao();;
-		List<Messages> lm=md.getAll();
-		modelAndView.addObject("lm",lm);
-		return modelAndView;
-	}
-	@RequestMapping("/upMessage.do")
-	public @ResponseBody AjaxResult upMessage(HttpServletRequest req,String description) {
-		if(CommonUtils.isEmpty(description))
-		{
-			return AjaxResult.errorInstance("描述不能为空");
-		}
-		String ip=req.getRemoteAddr();
-		MessagesDao md=new MessagesDao();
-		md.insert(description, ip);
-		return new AjaxResult("200","ok");
-	}
-	*/
 }

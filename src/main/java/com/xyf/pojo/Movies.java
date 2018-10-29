@@ -19,9 +19,6 @@ public class Movies {
 	
 	
 	
-	
-	
-	
 	public String getLength() {
 		return length;
 	}

@@ -2,6 +2,7 @@ package com.xuyuanfeng.utlis;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.jsp.jstl.core.Config;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,6 +11,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.xyf.config.Configuration;
 import com.xyf.dao.HotKeysDao;
 import com.xyf.pojo.HotKeys;
 
@@ -29,13 +31,22 @@ public class RedisUtils {
 	 */
 	private static JedisPool jedisPool = null;
 	static {
+		
 		try {
 			JedisPoolConfig config = new JedisPoolConfig();
-			config.setMaxTotal(100);// 最大的连接数
-			config.setMaxIdle(10);// 最大的空闲连接
-			config.setMaxWaitMillis(1000);// 获取连接最大的等待时间
+			config.setMaxTotal(Integer.parseInt(Configuration.redis_max_active));// 最大的连接数
+			config.setMaxIdle(Integer.parseInt(Configuration.redis_max_idle));// 最大的空闲连接
+			config.setMaxWaitMillis(Integer.parseInt(Configuration.redis_max_wait));// 获取连接最大的等待时间
 			config.setTestOnBorrow(true);// 获取连接检查是否有效
-			jedisPool = new JedisPool(config, "localhost", 6379, 1000,"xuyuanfeng");// ConfigInfo.redis_password
+//			        redis_addr=localhost
+//					redis_port=6379
+//					redis_max_active=2048
+//					redis_max_idle=400
+//					redis_max_wait=10000
+//					redis_timeout=15000
+//					redis_testonborrow=1
+//					redis_password=xuyuanfeng
+			jedisPool = new JedisPool(config, Configuration.redis_addr, Integer.parseInt(Configuration.redis_port), Integer.parseInt(Configuration.redis_timeout),Configuration.redis_password);// ConfigInfo.redis_password
 		} catch (Exception e) {
 			logger.warn(e);
 		}

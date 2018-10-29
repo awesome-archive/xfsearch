@@ -11,6 +11,27 @@ import com.xyf.pojo.Magnet;
 
 public class MagnetDao {
 
+	public List<String> getAllByMovieId(Long movieId)
+	{
+		List<String> lsMag=new ArrayList<String>();
+		ResultSet rs=null;
+		try {
+			rs=JDBCUtils.executeQuery("select * from t_movies_to_downloadurls where movieId =?", movieId);
+            while(rs.next())
+            {
+            	lsMag.add(rs.getString("downloadUrl"));
+            }
+            return   lsMag;
+		}
+		catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+		finally
+		{
+			JDBCUtils.closeAll(rs);
+			
+		}
+	}
 	/**
 	 * 获取所有磁力链接的信息
 	 */
@@ -51,7 +72,6 @@ public class MagnetDao {
 			JDBCUtils.closeAll(rs);
 			
 		}
-		
 		
 	}
 	

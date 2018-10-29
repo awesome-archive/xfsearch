@@ -3,10 +3,8 @@ package com.xyf.service;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,11 +18,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.elasticsearch.client.Response;
 import org.elasticsearch.client.RestClient;
-import org.elasticsearch.common.recycler.Recycler.C;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
-import com.xuyuanfeng.elasticsearch.primary.dto.query.Body;
 import com.xuyuanfeng.elasticsearch.primary.dto.query.Fields;
 import com.xuyuanfeng.elasticsearch.primary.dto.query.Highlight;
 import com.xuyuanfeng.elasticsearch.primary.dto.query.Multi_match;
@@ -38,6 +34,7 @@ import com.xuyuanfeng.utlis.EsUtils;
 import com.xuyuanfeng.utlis.HTMLUtils;
 import com.xuyuanfeng.utlis.JDBCUtils;
 import com.xuyuanfeng.utlis.JsoupUtils;
+import com.xyf.dao.MagnetDao;
 import com.xyf.pojo.Movies;
 
 /**
@@ -197,9 +194,14 @@ public class ElasticSearchRestFullService {
 				pl.setLan(lan);
 				pl.setDouban_link(douban_linl);
 				pl.setYear(year);
+				//根据当前的id去查询出List<String> 的url 集合
+				MagnetDao md=new MagnetDao();
+                List<String> movie_url_list=md.getAllByMovieId(pl.getId());
+				Gson gson =new Gson();
+				String movieUrlList=gson.toJson(movie_url_list);
+				pl.setDownload_url(movieUrlList);
 				
-				pl.setDownload_url(rs.getString("download_url"));
-				if(CommonUtils.isEmail(rs.getString("download_url")))
+				if(CommonUtils.isEmail(movieUrlList))
 				{
 					continue;
 				}
@@ -208,7 +210,6 @@ public class ElasticSearchRestFullService {
 				{
 					continue;
 				}
-				// 為了保證界面美觀
 				if (body != null) {
 					if (body.length() > 200)// 如果正文長度大於100 則切割
 					{

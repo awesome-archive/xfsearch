@@ -20,6 +20,18 @@
 	<!-- 开启springMVC相关注解支持 -->
 	<mvc:annotation-driven />
 
+	
+	<bean id="propertyConfigurer"  
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+        <property name="location" value="classpath:resource.properties" />  
+    </bean> 
+	
+	
+	
+	<!-- 需要被扫描到的包名 -->
+    <context:component-scan base-package="com.xyf.config" /> 
+	
+	
 	<!-- 视图解析器，视图页面的全路径为 prefix + viewName + suffix -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
