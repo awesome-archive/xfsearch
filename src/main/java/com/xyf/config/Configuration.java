@@ -12,7 +12,6 @@ public class Configuration {
 	    public static String redis_max_active;//redis最大的活跃连接
 	    public static String redis_max_idle;//redis最大的空闲连接
 	    public static String redis_max_wait;//redis最大的等待时间
-	    public static String redis_password;//redis的密码
 	    public static String redis_timeout;//redis的超时时间
 	    public static String redis_testonborrow;//redis
 	    
@@ -24,10 +23,7 @@ public class Configuration {
 		public  void setRedis_max_idle(String redis_max_idle) {
 	    	Configuration.redis_max_idle = redis_max_idle;
 		}
-	    @Value("${redis_password}")
-	   	public  void setRedis_password(String redis_password) {
-	    	Configuration.redis_password = redis_password;
-	   	}
+	    
 		@Value("${redis_max_wait}")
 		public  void setRedis_max_wait(String redis_max_wait) {
 			Configuration.redis_max_wait = redis_max_wait;

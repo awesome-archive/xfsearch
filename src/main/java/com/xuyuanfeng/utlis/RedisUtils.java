@@ -46,7 +46,7 @@ public class RedisUtils {
 //					redis_timeout=15000
 //					redis_testonborrow=1
 //					redis_password=xuyuanfeng
-			jedisPool = new JedisPool(config, Configuration.redis_addr, Integer.parseInt(Configuration.redis_port), Integer.parseInt(Configuration.redis_timeout),Configuration.redis_password);// ConfigInfo.redis_password
+			jedisPool = new JedisPool(config,"127.0.0.1",6379, 1000);// ConfigInfo.redis_password
 		} catch (Exception e) {
 			logger.warn(e);
 		}
