@@ -12,7 +12,7 @@
 <br/>
 <p>爬虫脚本python(授人以鱼不如授人以渔) https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<p/>
 <br/><br/>
-<h2>案例:微信小程序--必看热片（扫码体验）</h2>
+<h2>案例:微信小程序--必看热片（查看最新电影资讯，电影内容等等）</h2>
 <img src="/image/wx.jpg" alt="Ö÷Ò³" style="max-width:100%;"></br>
 <p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~~!
 有相关的建议欢迎发送邮箱15008121886@163.com 给我留言</p>
