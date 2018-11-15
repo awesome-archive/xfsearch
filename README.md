@@ -10,7 +10,7 @@
  解决了elasticsearch的版本不兼容的问题。
  🎖Soso Video Library is a website focused on Internet movie search. The SSM architecture combines the full-text search engine ElasticSearch's movie search project. It encapsulates the low version of the restClient client.</p>
 <br/>
-<<<<<<< HEAD
+
 
 <p>爬虫脚本python(授人以鱼不如授人以渔) https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<p/>
 <h2>API文档</h2>
@@ -21,12 +21,11 @@
 <h2>案例:微信小程序--必看热片（扫码体验）</h2>
 <img src="/image/wx.jpg" alt="Ö÷Ò³" style="max-width:100%;"></br>
 
-=======
 <p>爬虫脚本python(授人以鱼不如授人以渔) https://github.com/IAMJACKLiNOTBRUCELi/spider-to-bttt.la<p/>
 <br/><br/>
 <h2>案例:微信小程序--必看热片（查看最新电影资讯，电影内容等等）</h2>
 <img src="/image/wx.jpg" alt="Ö÷Ò³" style="max-width:100%;"></br>
->>>>>>> ca7f5fcad97d6c65d90b3a20db3855a0eee2156c
+
 <p>您的支持就是我们选择继续开源下去的动力,如果觉得还不错的话 请为他star 谢谢~~!
 有相关的建议欢迎发送邮箱15008121886@163.com 给我留言</p>
 
