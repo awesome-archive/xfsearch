@@ -1,4 +1,5 @@
 # xfsearch
+ <a href="http://www.lotcloudy.com/search.do?text=%E6%AD%BB%E4%BE%8D2">点击 亲自试一试</a>
 
 
  <br/><br/>
