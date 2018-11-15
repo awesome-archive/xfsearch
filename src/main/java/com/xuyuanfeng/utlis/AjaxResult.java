@@ -2,7 +2,7 @@ package com.xuyuanfeng.utlis;
 
 public class AjaxResult {
 /**
- * 用于异常日志
+ * 构建返回json格式的字符串
  */
     private String status; //表示响应状态，规定"success"表示成功，"error"表示失败
     private Object data; //表示响应信息，既可以是提示信息，也可以是json格式的对象数据

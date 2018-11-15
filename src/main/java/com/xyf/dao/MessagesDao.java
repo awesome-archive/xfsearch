@@ -11,7 +11,12 @@ import com.xuyuanfeng.utlis.JDBCUtils;
 import com.xyf.pojo.Messages;
 
 public class MessagesDao {
-
+/**
+ * 记录用户的信息
+ * @param description
+ * @param ip
+ * @return
+ */
 	public Boolean insert(String description, String ip) {
 
 		String name = UUID.randomUUID().toString();

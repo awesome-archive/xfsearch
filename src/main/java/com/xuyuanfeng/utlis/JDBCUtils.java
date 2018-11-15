@@ -8,7 +8,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 import org.apache.commons.dbcp2.BasicDataSource;
-
+/**
+ * 数据库连接工具类
+ * @author 徐塬峰
+ **@date: 2018年10月30日
+ */
 public class JDBCUtils {
 
 	final static BasicDataSource ds;

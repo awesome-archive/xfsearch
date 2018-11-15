@@ -8,7 +8,11 @@ import java.util.List;
 import com.xuyuanfeng.utlis.JDBCUtils;
 import com.xuyuanfeng.utlis.RedisUtils;
 import com.xyf.pojo.Magnet;
-
+/**
+ * 查询相关的磁力链接
+ * @author 徐塬峰
+ **@date: 2018年10月30日
+ */
 public class MagnetDao {
 
 	public List<String> getAllByMovieId(Long movieId)

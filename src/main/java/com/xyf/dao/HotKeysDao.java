@@ -13,7 +13,7 @@ import com.xyf.pojo.HotKeys;
  * select text,sum(c) from ( select ip,text,count(distinct ip) c from
  * t_searchkey where createtime>=DATE_SUB(NOW(),INTERVAL 30 DAY) GROUP BY
  * ip,text ORDER BY ip DESC )t GROUP BY t.text order by SUM(c) desc
- * 
+ * 从数据库中提取热搜词
  * @author Ray
  *
  */
@@ -44,18 +44,8 @@ public class HotKeysDao {
 		}
 
 	}
-	/*测试
-	public static void main(String []args)
-	{
-		
-		HotKeysDao hd=new HotKeysDao();
-		List<HotKeys> lh=hd.getHotKey();
-		for(HotKeys h:lh)
-		{
-			System.out.println(h.toString());
-		}
-		
-	}*/
+	
+
 	/**
 	 * select text,sum(c) as sum  from ( select ip,text,count(distinct ip) c from 
        t_searchkey where createtime>=DATE_SUB(NOW(),INTERVAL 1 DAY)

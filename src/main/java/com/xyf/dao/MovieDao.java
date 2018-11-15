@@ -26,9 +26,7 @@ public class MovieDao {
 			rs = JDBCUtils.executeQuery("select * from t_movies where id =?", id);
 			if (rs.next()) {
 				m.setCountry(rs.getString("country"));
-
 				m.setDownload_url(rs.getString("download_url"));
-
 				m.setImg_url(rs.getString("img_url"));
 				m.setDouban_link(rs.getString("douban_link"));
 				m.setIntroduce(rs.getString("introduce"));

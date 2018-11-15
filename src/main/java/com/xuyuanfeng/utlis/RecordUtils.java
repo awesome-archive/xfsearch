@@ -4,10 +4,13 @@ import java.sql.SQLException;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
-
+/**
+ * 记录用户输入
+ * @author 徐塬峰
+ **@date: 2018年10月30日
+ */
 public class RecordUtils {
 
-	// **記錄用戶的輸入 用於熱搜》》
 	public static void record(HttpServletRequest req, String text) {
 		String ip = req.getRemoteAddr();
 		if(text.length()>30)

@@ -16,7 +16,6 @@ public class TimeTask {
 		
        		RedisUtils.setHotKeyList();//设置热搜  
     		RedisUtils.setHotRank();//设置排行榜
-       		
        		logger.debug("每日热搜设置成功");
 		
 	}

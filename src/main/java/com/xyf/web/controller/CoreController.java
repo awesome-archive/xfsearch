@@ -14,15 +14,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.xuyuanfeng.utlis.AjaxResult;
 import com.xuyuanfeng.utlis.CommonUtils;
-import com.xuyuanfeng.utlis.DownloadImage;
 import com.xuyuanfeng.utlis.RecordUtils;
 import com.xuyuanfeng.utlis.RedisUtils;
 import com.xyf.dao.MagnetDao;
-import com.xyf.dao.MessagesDao;
 import com.xyf.dao.MovieDao;
 import com.xyf.pojo.HotKeys;
 import com.xyf.pojo.Magnet;
-import com.xyf.pojo.Messages;
 import com.xyf.pojo.Movies;
 import com.xyf.service.ElasticSearchRestFullService;
 
@@ -30,6 +27,10 @@ import com.xyf.service.ElasticSearchRestFullService;
 @RequestMapping("")
 public class CoreController {
 
+	//1.使用createAll.do操作 创建
+	//2.使用setHotKey.do创建热搜
+	//3.尽情使用吧
+	
 	@Autowired
 	private ElasticSearchRestFullService restService;
 	
@@ -94,15 +95,7 @@ public class CoreController {
 		restService.createIndex("moviesdb");
 		return modelAndView;
 	}
-	/**
-	 * //將圖片下載
-	 */
-	@RequestMapping("/download.do")
-	public ModelAndView download() {
-		ModelAndView modelAndView = new ModelAndView("success");
-		DownloadImage.Download();
-		return modelAndView;
-	}
+
 	/**
 	 * 根据传入的id 去mysql moviedb中读取资料的详细细节
 	 * @param id

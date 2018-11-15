@@ -22,7 +22,7 @@ import com.google.gson.Gson;
 import com.xyf.pojo.Movies;
 
 /**
- * 用来创建关闭es客户端
+ *Elasticsearch相关的工具类
  * 
  * @author 2016wlw2 徐塬峰 创建时间：2018年7月24日 上午10:32:28
  */

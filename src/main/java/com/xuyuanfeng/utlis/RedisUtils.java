@@ -27,7 +27,6 @@ public class RedisUtils {
 	private static final Logger logger = LogManager.getLogger(RedisUtils.class);
 	/**
 	 * 从配置文件中获得redis 的信息 并且创建jedis实例 操作redis服务器
-	 * 
 	 */
 	private static JedisPool jedisPool = null;
 	static {
@@ -46,7 +45,7 @@ public class RedisUtils {
 //					redis_timeout=15000
 //					redis_testonborrow=1
 //					redis_password=xuyuanfeng
-			jedisPool = new JedisPool(config,"127.0.0.1",6379, 1000);// ConfigInfo.redis_password
+			jedisPool = new JedisPool(config,Configuration.redis_addr,6379, 1000,"xuyuanfeng");// ConfigInfo.redis_password
 		} catch (Exception e) {
 			logger.warn(e);
 		}

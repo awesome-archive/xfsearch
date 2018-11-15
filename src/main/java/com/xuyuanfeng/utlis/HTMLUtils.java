@@ -4,7 +4,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.springframework.web.util.HtmlUtils;
-
+/**
+ * 用于切割html字符，以及html解码和转码 防止xss攻击
+ */
 public class HTMLUtils {
 	public static String delHTMLTag(String htmlStr){ 
 		//如果为null 或者为 空  则定义为空字符
