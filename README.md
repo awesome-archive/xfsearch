@@ -1,4 +1,4 @@
-﻿# 搜搜影库[已闭源，需要源代码+QQ986771570 ]
+﻿# 搜搜影库[已闭源，停止维护 ]
  <br/><br/>
  <img src="/image/show.png" alt="Ö÷Ò³" style="max-width:100%;"></br>
  <img src="/image/show2.jpg" alt="Ö÷Ò³" style="max-width:100%;"></br>
